@@ -1,6 +1,6 @@
 const {mongoose} = require("mongoose");
 
-mongoose.connect('mongodb://0.0.0.0:27017/galactic-gateways', {
+mongoose.connect('mongodb://0.0.0.0:27017/GalacticGateways', {
         useNewUrlParser: true,
         useUnifiedTopology: true
     }
