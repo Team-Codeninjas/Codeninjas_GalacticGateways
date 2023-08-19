@@ -1,5 +1,4 @@
 const UserController = require("../dao/user-dao.js");
-const UUID = require("uuidv4");
 
 const userFunc = {};
 
@@ -15,7 +14,6 @@ function getAllUsers(req, res) {
 
 function createUser(req, res) {
     const user = {
-        user_id: UUID.uuid(),
         first_name: req.body.first_name,
         last_name: req.body.last_name,
         starcomm_addr: req.body.starcomm_addr

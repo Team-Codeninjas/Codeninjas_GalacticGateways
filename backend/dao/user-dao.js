@@ -1,11 +1,7 @@
 const mongoose = require("../configs/connect-db.js");
 
 const userSchema = new mongoose.Schema({
-    user_id: {
-        type: String,
-        required: true,
-        unique: true,
-    },
+    //mongodb will automatically create a unique id for each user
     first_name: {
         type: String,
         required: true,
