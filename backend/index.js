@@ -9,11 +9,10 @@ app.use(morgan("dev"));
 app.use(cors());
 
 
-const userRoutes = require("./routes/user-routes.js");
-const monetaryRoutes = require("./routes/monetary-routes.js");
-
-app.use("/users", userRoutes);
-app.use("/monetary", monetaryRoutes);
+app.use("/users", require("./routes/user-routes.js"));
+app.use("/monetary", require("./routes/monetary-routes.js"));
+app.use("/spaceports", require("./routes/spaceport-routes.js"));
+app.use("/planets", require("./routes/planet-routes.js"));
 
 
 const PORT = 5000;
