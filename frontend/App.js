@@ -3,6 +3,7 @@ import AppNavigator from "./navigation/AppNavigator";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+// import TicketBookingDetails from "../screens/TicketBooking/TicketBookingDetails";
 import TicketBookingDetails from "./screens/TicketBooking/TicketBookingDetails";
 import Formm from "./pages/Formm";
 import TicketBookingHome from "./screens/TicketBooking/TicketBookingHome";
@@ -32,11 +33,7 @@ const HomeNavigator = () => {
         component={Home}
         options={{ headerShown: false, animation: "slide_from_bottom" }}
       />
-      <Stack.Screen
-        name="Home"
-        component={Home}
-        options={{ headerShown: false, animation: "slide_from_bottom" }}
-      />
+   
       <Stack.Screen
       name="TourComparing"
       component={TourComparing}
