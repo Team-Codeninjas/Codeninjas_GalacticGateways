@@ -5,17 +5,32 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { Entypo } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import port2 from '../../assets/port2.jpg'
 
 const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
 
 const CardOne = (props) => {
 
-  console.log(props);
-  //const startTime = 
+
+  const getImage = (imageName) => {
+    switch(imageName) {
+        case 'port1':
+            return require('../../assets/port1.jpg');
+        case 'port2':
+            return require('../../assets/port2.jpg');
+        case 'port3':
+            return require('../../assets/port3.jpg');
+        case 'port4':
+          return require('../../assets/port4.jpg');
+        case 'port5':
+          return require('../../assets/port5.jpg');
+    }
+}
+
   return(
     <Card style={styles.container}>
     {/* <Card.Title title="Card Title" subtitle="Card Subtitle" left={LeftContent} /> */}
-    <Card.Cover style={styles.image} source={{ uri: 'https://picsum.photos/700' }} />
+    <Card.Cover style={styles.image} source={getImage(props.details.image)} />
     <Card.Content>
       <Text variant="bodyLarge"><Ionicons name="time-outline" size={18} color="black" /> Departure Time</Text>
       <Text variant="bodySmall">{props.details.deptTime}</Text>

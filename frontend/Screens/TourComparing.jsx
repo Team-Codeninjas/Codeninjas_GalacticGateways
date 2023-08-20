@@ -3,10 +3,13 @@ import CardOne from "../Component/Card/Card"; // You aren't using this in the cu
 import { Avatar, Button, Card, Text } from 'react-native-paper';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useState, useEffect } from "react";
-const ScreenOne = () => {
+const TourComparing = () => {
     const [loadMore, setLoadMore] = useState(false);
 
     const cardArray = new Array();
+    const portImages = ['port2.jpg','port2.jpg','port2.jpg','port2.jpg'];
+
+    console.log('bird',portImages[0]);
 
     useEffect(() => {
         setLoadMore(false);
@@ -17,31 +20,36 @@ const ScreenOne = () => {
             deptTime: '10:55PM - 11:15PM',
             TravelTime: '9 days 5  hours',
             TravelFee: '$3,000,000,000',
-            Spaceport: 'Jupiter-Citadal'
+            Spaceport: 'Jupiter-Citadal',
+            image:'port1'
         },
         {
             deptTime: '11:05PM - 11:15PM',
             TravelTime: '7 days 12 hours',
             TravelFee: '$2,250,000,000',
-            Spaceport: 'Mars-vemus'
+            Spaceport: 'Mars-vemus',
+            image:'port2'
         },
         {
             deptTime: '10:55PM - 11:15PM',
             TravelTime: '7 days 12 hours',
             TravelFee: '$2,250,000,000',
-            Spaceport: 'Uranus-vivan'
+            Spaceport: 'Uranus-vivan',
+            image:'port3'
         },
         {
             deptTime: '9.00AM - 9.15AM',
             TravelTime: '6 days 6 hours',
             TravelFee: '$ 930,000,000',
-            Spaceport: 'Zerpa-novex'
+            Spaceport: 'Zerpa-novex',
+            image:'port4'
         },
         {
             deptTime: '2.00PM - 2.15PM',
             TravelTime: '10 days 6 hours',
             TravelFee: '$4,930,000,000',
-            Spaceport: 'Xorse-zampa'
+            Spaceport: 'Xorse-zampa',
+            image:'port5'
         }
     ];
 
@@ -49,7 +57,7 @@ const ScreenOne = () => {
         for (let i = 0; i < cards.length; i++) {
             cardArray.push(
                 <View style={style.card}>
-                    <CardOne details={cards[i]} />
+                    <CardOne details={cards[i]} image={portImages[0]}/>
                 </View>
             )
         }
@@ -156,4 +164,4 @@ const style = StyleSheet.create({
     }
 })
 
-export default ScreenOne;
+export default TourComparing;
