@@ -1,20 +1,18 @@
-import { StatusBar } from "expo-status-bar";
-import { Button, StyleSheet, Text, View } from "react-native";
+import { View,StyleSheet } from 'react-native'
+import React from 'react'
+import TicketPage from './screens/ticketDownload/TicketPage'
 
 export default function App() {
-  return (
+  return(
     <View style={styles.container}>
-      <Button title="Click me" onPress={() => alert("Button Clicked")} />
-      <StatusBar style="auto" />
+      <TicketPage/>
     </View>
-  );
+  )
 }
 
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+  container:{
+    flex:1,
+  }
+})
