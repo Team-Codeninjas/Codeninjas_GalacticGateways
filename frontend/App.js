@@ -85,8 +85,8 @@ const BottomTab = () => {
   return (
     <Tab.Navigator>
       <Tab.Screen
-        name="Home"
-        component={HomeNavigator}
+        name="Form"
+        component={Formm}
         options={{
           headerShown: false,
           tabBarIcon: ({ focused, size }) => (

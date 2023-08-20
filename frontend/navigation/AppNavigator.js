@@ -31,11 +31,6 @@ const AppNavigator = () => {
         options={{ headerShown: false, animation: "slide_from_right" }}
       /> */}
       <Stack.Screen
-        name="CompareForm"
-        component={Formm}
-        options={{ headerTitle: '', headerShown: false }}
-      />
-      <Stack.Screen
       name="TicketBookingHome"
       component={TicketBookingHome}
       options={{ headerTitle: "", headerShown: false }}
@@ -45,7 +40,11 @@ const AppNavigator = () => {
       component={TourComparing}
       options={{ headerTitle: "", headerShown: false }}
     />
-    
+    <Stack.Screen
+        name="CompareForm"
+        component={Formm}
+        options={{ headerTitle: '', headerShown: false }}
+      />
       <Stack.Screen
         name="Home"
         component={Home}
