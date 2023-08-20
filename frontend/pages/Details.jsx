@@ -1,13 +1,8 @@
-<<<<<<< Updated upstream
 import React, { useState } from 'react';
-=======
-import React from 'react';
->>>>>>> Stashed changes
 import { Dimensions, ImageBackground, StyleSheet, View,Text } from 'react-native';
 import backimage from "../images/background.jpg";
 
 const Details = () => {
-<<<<<<< Updated upstream
   
   const[recepino,setrecepino] = useState("TRW3123");
   const[datetime,setdatetime] = useState("2023-04-04 15.50 UTC");
@@ -18,11 +13,6 @@ const[deptimedate,setdeptimedate] = useState("2023-08-23 08:45 UTC");
 const[arrtimedate,setarrtimedate] = useState("2023-08-26 12:00 UTC");
 
   const[shuttle,setshuttle] = useState("Stellar Cruiser 3000");
-=======
-  const screenHeight = Dimensions.get("window").height;
-  const screenWidth = Dimensions.get("window").width;
-
->>>>>>> Stashed changes
   return (
     <View style={styles.containerrr}> 
       <ImageBackground source={backimage}  style={styles.imageBackground}>
@@ -31,7 +21,6 @@ const[arrtimedate,setarrtimedate] = useState("2023-08-26 12:00 UTC");
       </View>
       <View style={styles.bottom}>
        <View style={styles.middle}>
-<<<<<<< Updated upstream
         {/* one section */}
         <View >
         <View style={styles.left}>
@@ -112,8 +101,6 @@ const[arrtimedate,setarrtimedate] = useState("2023-08-26 12:00 UTC");
 
         </View>
         </View>
-=======
->>>>>>> Stashed changes
 
        </View>
       </View>
@@ -146,10 +133,6 @@ const styles = StyleSheet.create({
   },
   textStyle: {
     color: "#FFF",
-<<<<<<< Updated upstream
-=======
-    fontFamily: "Lato",
->>>>>>> Stashed changes
     fontSize: 24,
     fontStyle: "normal",
     fontWeight: "800",
@@ -175,7 +158,6 @@ const styles = StyleSheet.create({
     resizeMode: 'cover', // Adjust this based on your needs
   },middle:{
     backgroundColor: "rgba(217, 217, 217, 0.5)",
-<<<<<<< Updated upstream
     height:screenHeight*0.75,
     width:screenWidth*0.85,
     padding:10,
@@ -208,10 +190,6 @@ marginLeft:screenWidth*0.34,
     color:"black",
     fontWeight:'bold',
 
-=======
-    height:screenHeight*0.7,
-    width:screenWidth*0.8,
->>>>>>> Stashed changes
   }
 });
 
