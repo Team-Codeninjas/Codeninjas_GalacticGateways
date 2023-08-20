@@ -37,6 +37,11 @@ const HomeNavigator = () => {
         component={Formm}
         options={{ headerTitle: "", headerShown: false }}
       />
+      <Stack.Screen
+      name="TourComparing"
+      component={TourComparing}
+      options={{ headerTitle: "", headerShown: false }}
+    />
     
       
       
