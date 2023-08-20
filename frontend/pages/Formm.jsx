@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -11,27 +11,27 @@ import {
   Dimensions,
   TouchableWithoutFeedback,
   ImageBackground,
-  StatusBar
-} from 'react-native';
-import { Picker } from '@react-native-picker/picker';
-import { LinearGradient } from 'expo-linear-gradient';
-import { useForm, Controller } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
-import { FontAwesome, MaterialIcons, Entypo } from '@expo/vector-icons';
-import DateTimePicker from '@react-native-community/datetimepicker';
+} from "react-native";
+import { useNavigation } from "@react-navigation/core";
+import { Picker } from "@react-native-picker/picker";
+import { LinearGradient } from "expo-linear-gradient";
+import { useForm, Controller } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import { FontAwesome, MaterialIcons, Entypo } from "@expo/vector-icons";
+import DateTimePicker from "@react-native-community/datetimepicker";
+import { StatusBar } from "expo-status-bar";
 import backgroundImage from "../images/background.jpg";
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { useNavigation } from '@react-navigation/core';
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const numColumns = 3; // Number of columns in the first row
-const screenWidth = Dimensions.get('window').width;
+const screenWidth = Dimensions.get("window").width;
 
 export default Formm = () => {
-  const navigation=useNavigation();
+  const navigation = useNavigation();
   const schema = yup.object().shape({
-    from: yup.string().required('From is required'),
-    to: yup.string().required('Destination is required'),
+    from: yup.string().required("From is required"),
+    to: yup.string().required("Destination is required"),
   });
 
   const {
@@ -44,7 +44,8 @@ export default Formm = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    console.log('data');
+    console.log("data");
+    navigation.navigate("TourComparing");
   };
 
   const [showDepartureDate, setShowDepartureDate] = useState(false);
@@ -90,17 +91,17 @@ export default Formm = () => {
   };
 
   return (
-      <SafeAreaView contentContainer Style={styles.container}>
-        <ImageBackground
+    <SafeAreaView contentContainer Style={styles.container}>
+      <ImageBackground
         source={backgroundImage}
         resizeMode="cover"
         // style={styles.image}
-        >
+      >
         <View style={styles.row}>
           <Text
             style={[
               styles.text,
-              { fontWeight: '500', paddingLeft: 10, fontSize: 16 },
+              { fontWeight: "500", paddingLeft: 10, fontSize: 16 },
             ]}
           >
             From
@@ -113,7 +114,7 @@ export default Formm = () => {
               name="from"
               render={({ field: { onChange, onBlur, value } }) => (
                 <LinearGradient
-                  colors={['#BD00FF', 'rgba(86, 0, 228, 0.69)']}
+                  colors={["#BD00FF", "rgba(86, 0, 228, 0.69)"]}
                   style={styles.gradient}
                 >
                   <View style={{ paddingLeft: 15, paddingTop: 5 }}>
@@ -138,7 +139,7 @@ export default Formm = () => {
           <Text
             style={[
               styles.text,
-              { fontWeight: '500', paddingLeft: 10, fontSize: 16 },
+              { fontWeight: "500", paddingLeft: 10, fontSize: 16 },
             ]}
           >
             To
@@ -151,7 +152,7 @@ export default Formm = () => {
               name="to"
               render={({ field: { onChange, onBlur, value } }) => (
                 <LinearGradient
-                  colors={['#BD00FF', 'rgba(86, 0, 228, 0.69)']}
+                  colors={["#BD00FF", "rgba(86, 0, 228, 0.69)"]}
                   style={styles.gradient}
                 >
                   <View style={{ paddingLeft: 15, paddingTop: 5 }}>
@@ -176,7 +177,7 @@ export default Formm = () => {
           <Text
             style={[
               styles.text,
-              { fontWeight: '500', paddingLeft: 10, fontSize: 16 },
+              { fontWeight: "500", paddingLeft: 10, fontSize: 16 },
             ]}
           >
             Option 1
@@ -190,7 +191,7 @@ export default Formm = () => {
               render={({ field: { onChange, onBlur, value } }) => (
                 <View>
                   <LinearGradient
-                    colors={['#BD00FF', 'rgba(86, 0, 228, 0.69)']}
+                    colors={["#BD00FF", "rgba(86, 0, 228, 0.69)"]}
                     style={styles.gradient}
                   >
                     <Picker
@@ -219,7 +220,7 @@ export default Formm = () => {
               render={({ field: { onChange, onBlur, value } }) => (
                 <View>
                   <LinearGradient
-                    colors={['#BD00FF', 'rgba(86, 0, 228, 0.69)']}
+                    colors={["#BD00FF", "rgba(86, 0, 228, 0.69)"]}
                     style={styles.gradient}
                   >
                     <Picker
@@ -247,7 +248,7 @@ export default Formm = () => {
         <View style={[styles.row, { paddingTop: 2 }]}>
           <View style={[styles.column, { paddingRight: 5 }]}>
             <LinearGradient
-              colors={['#BD00FF', 'rgba(86, 0, 228, 0.69)']}
+              colors={["#BD00FF", "rgba(86, 0, 228, 0.69)"]}
               style={styles.gradient}
             >
               <TouchableWithoutFeedback
@@ -269,7 +270,7 @@ export default Formm = () => {
               <DateTimePicker
                 testID="dateTimePicker"
                 value={selectedDepartureDate}
-                mode={'date'}
+                mode={"date"}
                 is24Hour={true}
                 onChange={onDepartureDateChange}
               />
@@ -277,7 +278,7 @@ export default Formm = () => {
           </View>
           <View style={styles.column}>
             <LinearGradient
-              colors={['#BD00FF', 'rgba(86, 0, 228, 0.69)']}
+              colors={["#BD00FF", "rgba(86, 0, 228, 0.69)"]}
               style={styles.gradient}
             >
               <TouchableWithoutFeedback onPress={() => setShowReturnDate(true)}>
@@ -297,7 +298,7 @@ export default Formm = () => {
               <DateTimePicker
                 testID="dateTimePicker"
                 value={selectedReturnDate}
-                mode={'date'}
+                mode={"date"}
                 is24Hour={true}
                 onChange={onReturnDateChange}
               />
@@ -308,7 +309,7 @@ export default Formm = () => {
           <Text
             style={[
               styles.text,
-              { fontWeight: '500', paddingLeft: 10, fontSize: 16 },
+              { fontWeight: "500", paddingLeft: 10, fontSize: 16 },
             ]}
           >
             Option 2
@@ -322,7 +323,7 @@ export default Formm = () => {
               render={({ field: { onChange, onBlur, value } }) => (
                 <View>
                   <LinearGradient
-                    colors={['#BD00FF', 'rgba(86, 0, 228, 0.69)']}
+                    colors={["#BD00FF", "rgba(86, 0, 228, 0.69)"]}
                     style={styles.gradient}
                   >
                     <Picker
@@ -351,7 +352,7 @@ export default Formm = () => {
               render={({ field: { onChange, onBlur, value } }) => (
                 <View>
                   <LinearGradient
-                    colors={['#BD00FF', 'rgba(86, 0, 228, 0.69)']}
+                    colors={["#BD00FF", "rgba(86, 0, 228, 0.69)"]}
                     style={styles.gradient}
                   >
                     <Picker
@@ -379,7 +380,7 @@ export default Formm = () => {
         <View style={[styles.row, { paddingTop: 2 }]}>
           <View style={[styles.column, { paddingRight: 5 }]}>
             <LinearGradient
-              colors={['#BD00FF', 'rgba(86, 0, 228, 0.69)']}
+              colors={["#BD00FF", "rgba(86, 0, 228, 0.69)"]}
               style={styles.gradient}
             >
               <TouchableWithoutFeedback
@@ -401,7 +402,7 @@ export default Formm = () => {
               <DateTimePicker
                 testID="dateTimePicker"
                 value={selectedDepartureDate2}
-                mode={'date'}
+                mode={"date"}
                 is24Hour={true}
                 onChange={onDepartureDateChange2}
               />
@@ -409,7 +410,7 @@ export default Formm = () => {
           </View>
           <View style={styles.column}>
             <LinearGradient
-              colors={['#BD00FF', 'rgba(86, 0, 228, 0.69)']}
+              colors={["#BD00FF", "rgba(86, 0, 228, 0.69)"]}
               style={styles.gradient}
             >
               <TouchableWithoutFeedback
@@ -431,7 +432,7 @@ export default Formm = () => {
               <DateTimePicker
                 testID="dateTimePicker"
                 value={selectedReturnDate2}
-                mode={'date'}
+                mode={"date"}
                 is24Hour={true}
                 onChange={onReturnDateChange2}
               />
@@ -441,15 +442,14 @@ export default Formm = () => {
         <View style={[styles.row, { width: screenWidth * 0.5, paddingTop:15,paddingBottom:100 }]}>
           <Button
             title="Compare Trips"
-            onPress={()=>navigation.navigate("TourComparing")}
+            onPress={handleSubmit(onSubmit)}
             color="#5528D6"
           />
         </View>
       <StatusBar backgroundColor='#000' barStyle='light-content' />
 
       </ImageBackground>
-      </SafeAreaView>
-
+    </SafeAreaView>
   );
 };
 
@@ -459,15 +459,15 @@ const styles = StyleSheet.create({
   },
   row: {
     width: screenWidth * 0.95,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    justifyContent: "space-between",
     marginBottom: 10,
     paddingTop: 20,
     paddingLeft: 15,
   },
   firstRow: {
-    flexDirection: 'row',
-    justifyContent: 'center',
+    flexDirection: "row",
+    justifyContent: "center",
   },
 
   column: {
@@ -477,16 +477,16 @@ const styles = StyleSheet.create({
     borderRadius: 15,
   },
   text: {
-    color: 'white',
+    color: "white",
   },
   errorMessage: {
-    color: '#fab9b9',
-  },
-// image:{
-//   flex: 1,
-//   alignItems: "center",
-//   justifyContent: "center",
-//   resizeMode: "cover",
-//   width: "100%",
-// }
+    color: "#fab9b9",
+  },
+  // image:{
+  //   flex: 1,
+  //   alignItems: "center",
+  //   justifyContent: "center",
+  //   resizeMode: "cover",
+  //   width: "100%",
+  // }
 });
