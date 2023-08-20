@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { Modal, View, Text, Pressable, StyleSheet ,TouchableWithoutFeedback,TouchableOpacity,Image} from 'react-native';
+import { useNavigation } from '@react-navigation/core';
 
 const Currencyconfirmation = ({modalVisible,onClose,currency,onconfirmclose,showdetails}) => {
+  const navigation = useNavigation();
+
 
     const[proceedstatus,setproceed]=useState(false);
     const proceed=()=>{
@@ -9,9 +12,9 @@ const Currencyconfirmation = ({modalVisible,onClose,currency,onconfirmclose,show
 
     }
 
-    const Detailsfunc=()=>{
+    const Confimed=()=>{
      
-      showdetails();
+      navigation.navigate("Ticket")
     }
     return (
         <Modal animationType="fade" transparent={true} visible={modalVisible} >
@@ -44,7 +47,7 @@ const Currencyconfirmation = ({modalVisible,onClose,currency,onconfirmclose,show
            
            </View>
            <View style={{display:'flex',justifyContent:'center',alignItems:'center',height:"40%"}} >
-          <TouchableOpacity style={styles.buttonContainer } onPress={Detailsfunc} >
+          <TouchableOpacity style={styles.buttonContainer } onPress={Confimed} >
       <Text style={styles.buttonText}>CONFIRM</Text>
     </TouchableOpacity>
           </View>
