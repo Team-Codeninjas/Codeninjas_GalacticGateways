@@ -57,7 +57,7 @@ Before you begin, make sure you have the following installed:
 
 ## Contact
 
-Feel free to reach out to us at [contact@email.com] if you have any questions or need further assistance. Happy coding!
+Feel free to reach out to us at [chandulakavishka0@gmail.com] if you have any questions or need further assistance. Happy coding!
 
 
 
