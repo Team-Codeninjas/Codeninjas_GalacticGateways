@@ -221,6 +221,7 @@ navigation.navigate("Details");
             MENU
           </Text>
         </View>
+        <StatusBar barStyle='light-content' backgroundColor='#000'/>
       </ImageBackground>
     </View>
   );
