@@ -13,6 +13,7 @@ import Home from "./pages/Home";
 import TicketPage from "./screens/ticketDownload/TicketPage";
 import { FontAwesome } from "@expo/vector-icons";
 import TourComparing from "./screens/TourComparing";
+
 import ChargesPage from "./pages/Charges/Chargespage";
 import { Ionicons } from "@expo/vector-icons";
 const Stack = createStackNavigator();
@@ -25,6 +26,11 @@ const HomeNavigator = () => {
     //     headerShown: false // Hide the header for all screens in this navigator
     //   }}
     >
+      <Stack.Screen
+      name="TourComparing"
+      component={TourComparing}
+      options={{ headerTitle: "", headerShown: false }}
+    />
       <Stack.Screen
         name="Home"
         component={Home}
@@ -45,9 +51,8 @@ const HomeNavigator = () => {
         component={ChargesPage}
         options={{ headerShown: false, animation: "slide_from_right" }}
       />
-<<<<<<< Updated upstream
-=======
-         <Stack.Screen
+
+      <Stack.Screen
       name="TicketBookingHome"
       component={TicketBookingHome}
       options={{ headerTitle: "", headerShown: false }}
@@ -57,7 +62,7 @@ const HomeNavigator = () => {
         component={TicketBookingDetails}
         options={{ headerTitle: "", headerShown: false }}
       />
->>>>>>> Stashed changes
+
     </Stack.Navigator>
   );
 };
@@ -143,8 +148,8 @@ const BottomTab = () => {
         }}
       />
       <Tab.Screen
-        name="Compare"
-        component={CompareNavigator}
+        name="Form"
+        component={Formm}
         options={{
           headerShown: false,
           tabBarIcon: ({ focused, size }) => (
@@ -152,7 +157,7 @@ const BottomTab = () => {
           ),
         }}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Explore"
         component={ExploreNavigator}
         options={{
@@ -161,7 +166,7 @@ const BottomTab = () => {
             <FontAwesome name="wpexplorer" size={24} color="black" />
           ),
         }}
-      />
+      /> */}
       <Tab.Screen
         name="Setting"
         component={SettingNavigator}
