@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
+
 import {
   View,
   Text,
@@ -11,11 +13,16 @@ import {
 import { LinearGradient } from "expo-linear-gradient";
 // import { Link } from "expo-router";
 import backimage from "../../images/background.jpg";
-const ChargesPage = ({navigation}) => {
+const ChargesPage = ({route }) => {
+  const navigation = useNavigation();
+
   const [base_fare, setbase_fare] = useState(3000);
   const [travelTaxrate, settravelTaxrate] = useState(0.2);
   const [spaceportfee, setspaceportfee] = useState(300);
   const [meals, setmeals] = useState(500);
+  const { selectedFlightDetails } = route.params;
+
+
 
   return (
     <View style={styles.containerrr}> 

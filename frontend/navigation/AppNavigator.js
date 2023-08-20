@@ -34,6 +34,12 @@ const AppNavigator = () => {
         component={TicketBookingHome}
         options={{ headerTitle: "", headerShown: false }}
       />
+        <Stack.Screen
+        name="ChargesPage"
+        component={ChargesPage}
+        options={{ headerShown: false, animation: "slide_from_right" }}
+      />
+      
       <Stack.Screen
         name="TicketBookingDetails"
         component={TicketBookingDetails}
@@ -45,11 +51,14 @@ const AppNavigator = () => {
         options={{ headerTitle: '', headerShown: false }}
       />
       
+<<<<<<< Updated upstream
       <Stack.Screen
         name="ChargesPage"
         component={ChargesPage}
         options={{ headerShown: false, animation: "slide_from_right" }}
       />
+=======
+>>>>>>> Stashed changes
       <Stack.Screen
         name="Payment"
         component={Payment}
