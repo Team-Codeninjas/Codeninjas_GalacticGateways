@@ -23,6 +23,19 @@ const QuickSearch = () => {
 
   const [departureDate, setDepartureDate] = useState(new Date());
   const [returnDate, setReturnDate] = useState(new Date());
+
+  
+  const dataObject = {
+    selectedFromLocation,
+    selectedToLocation,
+    selectedPassengers,
+    departureDate,
+    returnDate,
+  
+  };
+
+
+
   const [showDeparturePicker, setShowDeparturePicker] = useState(false);
   const [showReturnPicker, setShowReturnPicker] = useState(false);
 
@@ -142,7 +155,7 @@ const QuickSearch = () => {
         </Picker>
       </View>
 
-      <CustomButton style={styles.button} title="find spaceship" />
+      <CustomButton style={styles.button} title="find spaceship"   onFindSpaceship={dataObject} />
     </View>
   );
 };

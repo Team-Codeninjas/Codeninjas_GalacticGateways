@@ -45,6 +45,19 @@ const HomeNavigator = () => {
         component={ChargesPage}
         options={{ headerShown: false, animation: "slide_from_right" }}
       />
+<<<<<<< Updated upstream
+=======
+         <Stack.Screen
+      name="TicketBookingHome"
+      component={TicketBookingHome}
+      options={{ headerTitle: "", headerShown: false }}
+    />
+      <Stack.Screen
+        name="TicketBookingDetails"
+        component={TicketBookingDetails}
+        options={{ headerTitle: "", headerShown: false }}
+      />
+>>>>>>> Stashed changes
     </Stack.Navigator>
   );
 };

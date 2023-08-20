@@ -26,7 +26,17 @@ const TicketBookingHome = ({ route }) => {
     navigation.navigate("TicketBookingDetails");
   };
 
-  const { showPayNowButton } = route.params || {};
+  const {
+    showPayNowButton,
+    selectedFlightDetails,
+    selectedFromLocation,
+    selectedToLocation,
+    selectedPassengers,
+    departureDate,
+    returnDate
+  } = route.params || {};
+
+
   const HandlePayNow = () => {
     const { selectedClass, seatCount, sliderValue } = route.params;
     const selectedFlights = flightData.filter((flight) => flight.containerPressed);
@@ -84,7 +94,7 @@ const TicketBookingHome = ({ route }) => {
             style={styles.buttonEarth}
             labelStyle={styles.buttonLabel}
           >
-            EARTH
+            {selectedFromLocation}
           </Button>
         </View>
         <View>
@@ -96,7 +106,7 @@ const TicketBookingHome = ({ route }) => {
             style={styles.buttonKepler}
             labelStyle={styles.buttonLabel}
           >
-            KEPLER
+            {selectedToLocation}
           </Button>
         </View>
       </View>

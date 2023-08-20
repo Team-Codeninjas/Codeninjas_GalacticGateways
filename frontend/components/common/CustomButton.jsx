@@ -4,11 +4,11 @@ import Colors from "../../constants/Colors";
 import { useNavigation } from '@react-navigation/core';
 
 
-const CustomButton = ({ onPress, title, disabled, ...otherProps }) => {
+const CustomButton = ({ onPress, title, disabled, onFindSpaceship, ...otherProps }) => {
   const navigation= useNavigation();
   return (
     <TouchableOpacity
-      onPress={()=>navigation.navigate("CompareForm")}
+      onPress={()=>navigation.navigate("TicketBookingHome",onFindSpaceship)}
       disabled={disabled}
       style={[styles.container, otherProps.style]}
     >
