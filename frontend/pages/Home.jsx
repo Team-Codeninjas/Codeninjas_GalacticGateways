@@ -1,7 +1,7 @@
-import { StyleSheet, View,StatusBar } from "react-native";
+import { StyleSheet, View,StatusBar,Text } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Avatar, Text } from "react-native-paper";
+import { Avatar } from "react-native-paper";
 import { LinearGradient } from "expo-linear-gradient";
 import QuickSearch from "../layouts/home/QuickSearch";
 import BadgeList from "../layouts/home/BadgeList";
@@ -15,9 +15,7 @@ const Home = () => {
           <LinearGradient colors={Colors.gradient} style={styles.header}>
             <View style={styles.headerContainer}>
               <View style={{ width: "80%" }}>
-                <Text variant="displaySmall" style={styles.headerTitle}>
-                  Where would you want to go?
-                </Text>
+                <Text style={styles.headerTitle}>Where would you want to go?</Text>
               </View>
               <View style={[styles.avatarContainer]}>
                 <Avatar.Image size={50} source={{ uri: "https://picsum.photos/200" }} />
@@ -52,6 +50,7 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 23,
     elevation: 3,
   },
+
   headerContainer: {
     marginTop: 40,
     flexDirection: "row",
@@ -59,8 +58,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 10,
   },
+  
   headerTitle: {
-    fontSize: 34,
+    fontSize: 24,
     fontWeight: "bold",
     color: Colors.text,
   },
