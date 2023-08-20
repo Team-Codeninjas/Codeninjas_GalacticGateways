@@ -15,7 +15,7 @@ const Home = () => {
           <LinearGradient colors={Colors.gradient} style={styles.header}>
             <View style={styles.headerContainer}>
               <View style={{ width: "80%" }}>
-                <Text variant="displaySmall" style={styles.headerTitle}>
+                <Text style={styles.headerTitle}>
                   Where would you want to go?
                 </Text>
               </View>
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   headerTitle: {
-    fontSize: 34,
+    fontSize: 28,
     fontWeight: "bold",
     color: Colors.text,
   },
