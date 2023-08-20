@@ -436,7 +436,7 @@ export default Formm = () => {
             )}
           </View>
         </View>
-        <View style={[styles.row, { width: screenWidth * 0.5, paddingTop: 30,paddingBottom:100 }]}>
+        <View style={[styles.row, { width: screenWidth * 0.5, paddingTop:15,paddingBottom:100 }]}>
           <Button
             title="Compare Trips"
             onPress={handleSubmit(onSubmit)}
