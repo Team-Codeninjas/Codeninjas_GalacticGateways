@@ -1,7 +1,7 @@
 import { useNavigation } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import { StyleSheet, View, TouchableOpacity,ImageBackground } from "react-native";
+import { StyleSheet, View, TouchableOpacity, ImageBackground } from "react-native";
 import { RadioButton } from "react-native-paper";
 import Slider from "@react-native-community/slider";
 import { Text, Button } from "react-native-paper";
@@ -16,7 +16,7 @@ const TicketBookingDetails = () => {
     navigation.navigate("TicketBookingHome", {
       showPayNowButton: true,
       selectedClass: selectedClass,
-      seatCount:seatCount,
+      seatCount: seatCount,
       sliderValue: sliderValue,
     });
   };
@@ -31,7 +31,7 @@ const TicketBookingDetails = () => {
   const [selectedClass, setSelectedClass] = useState("A");
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [sliderValue, setSliderValue] = useState(0); // Initial value
-  const [bookedSeat, setBookedSeat] = useState(["1-2", "2-1" , "5-3"]);
+  const [bookedSeat, setBookedSeat] = useState(["1-2", "2-1", "5-3"]);
   const [seatCount, setSeatCount] = useState(0);
   const onSliderValueChange = (value) => {
     setSliderValue(value);
@@ -44,10 +44,10 @@ const TicketBookingDetails = () => {
     const seatId = `${row}-${col}`;
     if (selectedSeats.includes(seatId)) {
       setSelectedSeats(selectedSeats.filter((seat) => seat !== seatId));
-      setSeatCount(prevSeatCount => prevSeatCount - 1);
+      setSeatCount((prevSeatCount) => prevSeatCount - 1);
     } else {
       setSelectedSeats([...selectedSeats, seatId]);
-      setSeatCount(prevSeatCount => prevSeatCount + 1);
+      setSeatCount((prevSeatCount) => prevSeatCount + 1);
     }
   };
 
@@ -99,91 +99,80 @@ const TicketBookingDetails = () => {
   };
   return (
     <View style={styles.container}>
-      <ImageBackground
-        source={backgroundImage}
-        resizeMode="cover"
-        style={styles.image}>
-      <View style={styles.apply}>
-        <FontAwesome
-          onPress={handleBackButton}
-          name="angle-left"
-          size={30}
-          color="white"
-        />
-       <Button
-          onPress={handleApplyButton}
-          style={{
-            backgroundColor: "#5528D6",
-            marginTop:15,
-            marginRight:10,
-            paddingHorizontal: 20,
-            paddingVertical: 3,
-            borderRadius: 5,
-          }}
-          labelStyle={{ color: "white" }}
-        >
-          Apply
-        </Button>
-      </View>
-      <View style={styles.headerContainer}>
-        <Button style={styles.resBtn} labelStyle={{ color: "black" }}>
-          Reserved
-        </Button>
-        <Button style={styles.avaBtn} labelStyle={{ color: "white" }}>
-          Availble
-        </Button>
-        <Button style={styles.selBtn} labelStyle={{ color: "white" }}>
-          Selected
-        </Button>
-      </View>
+      <ImageBackground source={backgroundImage} resizeMode="cover" style={styles.image}>
+        <View style={styles.apply}>
+          <FontAwesome onPress={handleBackButton} name="angle-left" size={30} color="white" />
+          <Button
+            onPress={handleApplyButton}
+            style={{
+              backgroundColor: "#5528D6",
+              marginTop: 15,
+              marginRight: 10,
+              paddingHorizontal: 20,
+              paddingVertical: 3,
+              borderRadius: 5,
+            }}
+            labelStyle={{ color: "white" }}
+          >
+            Apply
+          </Button>
+        </View>
+        <View style={styles.headerContainer}>
+          <Button style={styles.resBtn} labelStyle={{ color: "black" }}>
+            Reserved
+          </Button>
+          <Button style={styles.avaBtn} labelStyle={{ color: "white" }}>
+            Availble
+          </Button>
+          <Button style={styles.selBtn} labelStyle={{ color: "white" }}>
+            Selected
+          </Button>
+        </View>
 
-      <RadioButton.Group
-        onValueChange={(value) => setSelectedClass(value)}
-        value={selectedClass}
-      >
-        <View style={styles.radioButtons}>
-          <RadioButton.Item
-            label="Class A"
-            value="A"
-            style={styles.button}
-            labelStyle={{ color: "#14205d" }}
-          />
-          <RadioButton.Item
-            label="Class B"
-            value="B"
-            style={styles.button}
-            labelStyle={{ color: "#14205d" }}
-          />
-          <RadioButton.Item
-            label="Class C"
-            value="C"
-            style={styles.button}
-            labelStyle={{ color: "#14205d" }}
-          />
-        </View>
-      </RadioButton.Group>
-      <View style={styles.seatingContainer}>{renderSeats()}</View>
-      <View style={styles.bagadgeContainer}>
-        <View style={styles.bagadgeTextContainer}>
-          <Text style={styles.bagadgeText}>Bagadge Weight</Text>
-        </View>
-        <View style={styles.sliderContainer}>
-          <Slider
-            value={sliderValue}
-            onValueChange={onSliderValueChange}
-            style={{ width: 230, height: 40 }}
-            minimumValue={0}
-            maximumValue={100}
-            step={1}
-            minimumTrackTintColor="#0C0337"
-            maximumTrackTintColor="white"
-          />
-          <View style={styles.sliderValue}>
-            <Text style={styles.valueText}>{sliderValue}</Text>
+        <RadioButton.Group onValueChange={(value) => setSelectedClass(value)} value={selectedClass}>
+          <View style={styles.radioButtons}>
+            <RadioButton.Item
+              label="Class A"
+              value="A"
+              style={styles.button}
+              labelStyle={{ color: "#14205d" }}
+            />
+            <RadioButton.Item
+              label="Class B"
+              value="B"
+              style={styles.button}
+              labelStyle={{ color: "#14205d" }}
+            />
+            <RadioButton.Item
+              label="Class C"
+              value="C"
+              style={styles.button}
+              labelStyle={{ color: "#14205d" }}
+            />
+          </View>
+        </RadioButton.Group>
+        <View style={styles.seatingContainer}>{renderSeats()}</View>
+        <View style={styles.bagadgeContainer}>
+          <View style={styles.bagadgeTextContainer}>
+            <Text style={styles.bagadgeText}>Bagadge Weight</Text>
+          </View>
+          <View style={styles.sliderContainer}>
+            <Slider
+              value={sliderValue}
+              onValueChange={onSliderValueChange}
+              style={{ width: 230, height: 40 }}
+              minimumValue={0}
+              maximumValue={100}
+              step={1}
+              minimumTrackTintColor="#0C0337"
+              maximumTrackTintColor="white"
+            />
+            <View style={styles.sliderValue}>
+              <Text style={styles.valueText}>{sliderValue}</Text>
+            </View>
           </View>
         </View>
-      </View>
-      <StatusBar style="auto" />
+        <StatusBar style="auto" />
       </ImageBackground>
     </View>
   );
@@ -203,18 +192,18 @@ const styles = StyleSheet.create({
   apply: {
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "center", 
-    position: "absolute", 
-    left: 10, 
+    alignItems: "center",
+    position: "absolute",
+    left: 10,
     right: 3,
-    top: 20,
+    bottom: 0,
     padding: 10,
     marginTop: 0,
   },
   headerContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    margin: 10,
+    margin: 20,
     paddingHorizontal: 10,
   },
   resBtn: {
@@ -275,8 +264,8 @@ const styles = StyleSheet.create({
     margin: 2,
     backgroundColor: "white",
     borderRadius: 15,
-    marginTop:10,
-    marginBottom:10,
+    marginTop: 10,
+    marginBottom: 10,
     borderWidth: 2,
     borderColor: "#5528D6",
     height: 50,
@@ -320,11 +309,11 @@ const styles = StyleSheet.create({
   bookedSeat: {
     backgroundColor: "#777777",
   },
-  image:{
+  image: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
     resizeMode: "cover",
     width: "100%",
-  }
+  },
 });
