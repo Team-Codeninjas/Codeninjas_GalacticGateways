@@ -10,7 +10,8 @@ import {
   ScrollView,
   Dimensions,
   TouchableWithoutFeedback,
-  ImageBackground
+  ImageBackground,
+  StatusBar
 } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -19,7 +20,6 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { FontAwesome, MaterialIcons, Entypo } from '@expo/vector-icons';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import { StatusBar } from 'expo-status-bar';
 import backgroundImage from "../images/background.jpg";
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -443,7 +443,8 @@ export default Formm = () => {
             color="#5528D6"
           />
         </View>
-      <StatusBar />
+      <StatusBar backgroundColor='purple' barStyle='light-content' />
+
       </ImageBackground>
       </SafeAreaView>
 
