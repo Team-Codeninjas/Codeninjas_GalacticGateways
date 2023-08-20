@@ -1,5 +1,5 @@
 import { View, ScrollView, StyleSheet } from "react-native";
-import CardOne from "../Component/Card/Card"; // You aren't using this in the current code.
+import TourCard from "../component/card";
 import { Avatar, Button, Card, Text } from 'react-native-paper';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useState, useEffect } from "react";
@@ -7,9 +7,6 @@ const TourComparing = () => {
     const [loadMore, setLoadMore] = useState(false);
 
     const cardArray = new Array();
-    const portImages = ['port2.jpg','port2.jpg','port2.jpg','port2.jpg'];
-
-    console.log('bird',portImages[0]);
 
     useEffect(() => {
         setLoadMore(false);
@@ -57,7 +54,7 @@ const TourComparing = () => {
         for (let i = 0; i < cards.length; i++) {
             cardArray.push(
                 <View style={style.card}>
-                    <CardOne details={cards[i]} image={portImages[0]}/>
+                    <TourCard details={cards[i]} />
                 </View>
             )
         }
@@ -65,7 +62,7 @@ const TourComparing = () => {
         for (let i = 0; i < 4; i++) {
             cardArray.push(
                 <View style={style.card}>
-                    <CardOne details={cards[i]} />
+                    <TourCard details={cards[i]} />
                 </View>
             )
         }

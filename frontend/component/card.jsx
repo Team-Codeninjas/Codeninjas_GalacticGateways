@@ -5,25 +5,24 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { Entypo } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import port2 from '../../assets/port2.jpg'
 
 const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
 
-const CardOne = (props) => {
+const TourCard = (props) => {
 
 
   const getImage = (imageName) => {
     switch(imageName) {
         case 'port1':
-            return require('../../assets/port1.jpg');
+            return require('../assets/port1.jpg');
         case 'port2':
-            return require('../../assets/port2.jpg');
+            return require('../assets/port2.jpg');
         case 'port3':
-            return require('../../assets/port3.jpg');
+            return require('../assets/port3.jpg');
         case 'port4':
-          return require('../../assets/port4.jpg');
+          return require('../assets/port4.jpg');
         case 'port5':
-          return require('../../assets/port5.jpg');
+          return require('../assets/port5.jpg');
     }
 }
 
@@ -58,4 +57,4 @@ const styles = StyleSheet.create({
     
 })
 
-export default CardOne;
+export default TourCard;
