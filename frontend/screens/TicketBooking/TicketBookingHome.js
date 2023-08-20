@@ -144,6 +144,7 @@ const TicketBookingHome = ({ route }) => {
         <Button
           contentStyle={styles.button4content}
           style={styles.button4container}
+          labelStyle={styles.buttonLabel}
           onPress={handleShowDetails}
         >
           <Text>Show Flight Details</Text>
@@ -156,6 +157,7 @@ const TicketBookingHome = ({ route }) => {
         <Button
           icon="bag-checked"
           style={styles.button5container}
+          labelStyle={styles.buttonLabel}
           onPress={handleAddBaggageCapacity}
         >
           <Text>Add Baggage Capacity</Text>
@@ -165,6 +167,7 @@ const TicketBookingHome = ({ route }) => {
         <Button
           icon="account"
           style={styles.button6container}
+          labelStyle={styles.buttonLabel}
           onPress={handleAddBaggageCapacity}
         >
           <Text>Choose Class</Text>
@@ -174,6 +177,7 @@ const TicketBookingHome = ({ route }) => {
         <Button
           icon="seat"
           style={styles.button7container}
+          labelStyle={styles.buttonLabel}
           onPress={handleAddBaggageCapacity}
         >
           <Text>Choose Your Seat</Text>

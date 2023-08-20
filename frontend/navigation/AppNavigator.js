@@ -56,7 +56,6 @@ const AppNavigator = () => {
         component={ChargesPage}
         options={{ headerShown: false, animation: "slide_from_right" }}
       />
-      
       <Stack.Screen
         name="CompareForm"
         component={Formm}
