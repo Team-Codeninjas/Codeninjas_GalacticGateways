@@ -1,25 +1,9 @@
-const UserController = require("../dao/user-dao.js");
+const User = require("../dao/user-dao.js");
 
 const userFunc = {};
 
-function getAllUsers(req, res) {
-    UserController.find()
-        .then((users) => {
-            res.status(200).json(users);
-        })
-        .catch((err) => {
-            res.status(400).json(err);
-        });
-}
-
-function createUser(req, res) {
-    const user = {
-        first_name: req.body.first_name,
-        last_name: req.body.last_name,
-        starcomm_addr: req.body.starcomm_addr
-    };
-
-    UserController.create(user)
+userFunc.getUserByID = async (req, res) =>{
+    await User.findById(req.query.id)
         .then((user) => {
             res.status(200).json(user);
         })
@@ -28,8 +12,21 @@ function createUser(req, res) {
         });
 }
 
+userFunc.createUser = async (req, res) => {
+    const user = {
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        starcomm_addr: req.body.starcomm_addr
+    };
 
-userFunc.getAllUsers = getAllUsers;
-userFunc.createUser = createUser;
+    await User.create(user)
+        .then((user) => {
+            res.status(200).json(user);
+        })
+        .catch((err) => {
+            res.status(400).json(err);
+        });
+}
+
 
 module.exports = userFunc;
