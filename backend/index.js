@@ -10,12 +10,14 @@ app.use(cors());
 
 
 app.use("/users", require("./routes/user-routes.js"));
-app.use("/monetary", require("./routes/monetary-routes.js"));
+app.use("/monetary-details", require("./routes/monetary-routes.js"));
 app.use("/spaceports", require("./routes/spaceport-routes.js"));
 app.use("/planets", require("./routes/planet-routes.js"));
 app.use("/schedules", require("./routes/schedule-routes.js"));
 app.use("/travel-classes", require("./routes/travelclass-routes.js"));
 app.use("/spaceships", require("./routes/spaceship-routes.js"));
+app.use("/seats", require("./routes/seat-routes.js"));
+app.use("/booking-details", require("./routes/bookingDetail-routes.js"));
 
 
 const PORT = 5000;
