@@ -9,8 +9,8 @@ const Details = () => {
   const[payment,setpayment] = useState("3000 Universal Dollors");
 const[depature,setdepature] = useState("Earth Spaceport Alpha");
   const[arrival,setarrival] = useState("Kepler Station Theta");
-const[deptimedate,setdeptimedate] = useState("2023-08-15 08:00 UTC");
-const[arrtimedate,setarrtimedate] = useState("2023-08-16 12:00 UTC");
+const[deptimedate,setdeptimedate] = useState("2023-08-23 08:45 UTC");
+const[arrtimedate,setarrtimedate] = useState("2023-08-26 12:00 UTC");
 
   const[shuttle,setshuttle] = useState("Stellar Cruiser 3000");
   return (
