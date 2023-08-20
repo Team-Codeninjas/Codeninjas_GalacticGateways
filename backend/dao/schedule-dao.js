@@ -14,11 +14,11 @@ const scheduleSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         required: true,
     },
-    departure_time: {
+    departure_date: {
         type: Date,
         required: true,
     },
-    arrival_time: {
+    arrival_date: {
         type: Date,
         required: true,
     },

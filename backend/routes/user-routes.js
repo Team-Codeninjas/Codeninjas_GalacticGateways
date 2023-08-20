@@ -1,12 +1,7 @@
 const router = require("express").Router();
 const userFunc = require("../controllers/user-controller.js");
 
-router.get("/", (req, res) => {
-    userFunc.getUserByID(req, res);
-});
-
-router.post("/", (req, res) => {
-    userFunc.createUser(req, res);
-});
+router.get("/", userFunc.getUserByID);
+router.post("/", userFunc.createUser);
 
 module.exports = router;
