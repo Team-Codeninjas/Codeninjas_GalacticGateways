@@ -12,6 +12,7 @@ import Home from "./pages/Home";
 import TicketPage from "./screens/ticketDownload/TicketPage";
 import { FontAwesome } from "@expo/vector-icons";
 import TourComparing from "./screens/TourComparing";
+import ChargesPage from "./pages/Charges/Chargespage";
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -39,10 +40,10 @@ const HomeNavigator = () => {
         options={{ headerTitle: "", headerShown: false }}
       />
       <Stack.Screen
-      name="TourComparing"
-      component={TourComparing}
-      options={{ headerTitle: "", headerShown: false }}
-    />
+        name="ChargesPage"
+        component={ChargesPage}
+        options={{ headerShown: false, animation: "slide_from_right" }}
+      />
       
       
     </Stack.Navigator>
