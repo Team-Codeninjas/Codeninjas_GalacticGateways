@@ -1,15 +1,20 @@
 import { Tabs } from "expo-router";
-import { useColorScheme } from "react-native";
 import Colors from "../../constants/Colors";
+import { MaterialIcons } from "@expo/vector-icons";
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
     <Tabs
       initialRouteName="home"
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
+        tabBarActiveTintColor: Colors.primary,
+        tabBarInactiveTintColor: Colors.white,
+        tabBarActiveBackgroundColor: Colors.secondary,
+        tabBarStyle: {
+          height: 60,
+          borderTopWidth: 0,
+        },
+        tabBarShowLabel: false,
       }}
     >
       <Tabs.Screen
@@ -17,6 +22,8 @@ export default function TabLayout() {
         options={{
           href: "/home",
           headerShown: false,
+          tabBarIcon: ({ color }) => <MaterialIcons name="home" size={24} color={color} />,
+          tabBarLabel: "Home",
         }}
       />
     </Tabs>
