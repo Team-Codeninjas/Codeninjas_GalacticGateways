@@ -1,3 +1,6 @@
+
+import AppNavigator from './navigation/AppNavigator';
+
 import React from 'react'
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -10,9 +13,17 @@ import TicketPage from './screens/ticketDownload/TicketPage'
 
 const Stack=createNativeStackNavigator();
 
-export default function App() {
+
+const App = () => {
   return (
     <NavigationContainer>
+      <AppNavigator />
+    </NavigationContainer>
+  );
+};
+
+export default App;
+
       <Stack.Navigator>
         <Stack.Screen name="Home" component={ChargesPage} options={{ headerShown: false ,animation: 'slide_from_bottom'}}  />
         <Stack.Screen name="Payment" component={Payment}  options={{ headerShown: false,animation: 'slide_from_right' }}/>
@@ -32,3 +43,4 @@ const styles = StyleSheet.create({
 
   },
 });
+
