@@ -133,7 +133,6 @@ const styles = StyleSheet.create({
   },
   textStyle: {
     color: "#FFF",
-    fontFamily: "Lato",
     fontSize: 24,
     fontStyle: "normal",
     fontWeight: "800",

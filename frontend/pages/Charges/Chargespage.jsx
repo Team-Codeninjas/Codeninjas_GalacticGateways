@@ -132,7 +132,6 @@ const styles = StyleSheet.create({
   },
   textStyle: {
     color: "#FFF",
-    fontFamily: "Lato",
     fontSize: 24,
     fontStyle: "normal",
     fontWeight: "800",
@@ -153,7 +152,6 @@ const styles = StyleSheet.create({
   },
   additionalText: {
     color: "#FFF",
-    fontFamily: "Lato",
     fontSize: 16,
     fontStyle: "normal",
     fontWeight: "900",
@@ -199,7 +197,6 @@ const styles = StyleSheet.create({
   totaltext: {
     marginLeft: screenWidth*0.04,
     color: "#000",
-    fontFamily: "Lato",
     fontSize: 18,
     fontStyle: "normal",
     fontWeight: "900",
@@ -207,7 +204,6 @@ const styles = StyleSheet.create({
   totalprice: {
     marginRight: screenWidth*0.04,
     color: "#000",
-    fontFamily: "Lato",
     fontSize: 18,
     fontStyle: "normal",
     fontWeight: "900",
@@ -233,7 +229,6 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: "#0C0337",
-    fontFamily: "Lato",
     fontSize: 19,
     fontWeight: "900",
   },

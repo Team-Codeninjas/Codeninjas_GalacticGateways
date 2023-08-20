@@ -117,7 +117,6 @@ const styles = StyleSheet.create({
   },
   textStyle: {
     color: "#FFF",
-    fontFamily: "Lato",
     fontSize: 24,
     fontStyle: "normal",
     fontWeight: "800",
@@ -146,7 +145,6 @@ justifyContent:"space-evenly",
 
   },currencyText:{
     color: '#FFF',
-    fontFamily: 'Lato',
     fontSize: 18,
     fontStyle: 'normal',
     fontWeight: '900',
