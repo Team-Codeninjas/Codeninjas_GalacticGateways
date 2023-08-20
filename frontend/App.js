@@ -62,7 +62,17 @@ const HomeNavigator = () => {
         component={Details}
         options={{ headerShown: false, animation: "slide_from_right" }}
       />
-      
+      <Stack.Screen
+        name="TicketBookingHome"
+        component={TicketBookingHome}
+        options={{ headerTitle: "", headerShown: false }}
+      />
+
+      <Stack.Screen
+        name="TicketBookingDetails"
+        component={TicketBookingDetails}
+        options={{ headerTitle: "", headerShown: false }}
+      />
 
     </Stack.Navigator>
   );
