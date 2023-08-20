@@ -1,21 +1,24 @@
-import AppNavigator from './navigation/AppNavigator';
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import ChargesPage from './pages/Charges/Chargespage';
-import Payment from './pages/Payment';
-import { Button, StyleSheet, Text, View } from 'react-native';
-import Details from './pages/Details';
-import CustomImageCarousal from './components/CustomImageCarousalSquare';
-import TicketPage from './screens/ticketDownload/TicketPage';
-import Form from './pages/Form';
+import AppNavigator from "./navigation/AppNavigator";
+
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+import { Button, StyleSheet, Text, View, StyleSheet } from "react-native";
 
 const Stack = createNativeStackNavigator();
 
-export default function App() {
+const App = () => {
   return (
     <NavigationContainer>
       <AppNavigator />
     </NavigationContainer>
   );
-}
+};
+
+export default App;
+
+const styles = StyleSheet.create({
+  container: {},
+});
+
