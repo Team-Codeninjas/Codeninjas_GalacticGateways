@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
         borderWidth:3,
         padding: 20,
         width: "80%", // Adjust the width as needed
-        height: "60%", // Adjust the height as needed
+        height: 300, // Adjust the height as needed
       },
       // 
     title: {

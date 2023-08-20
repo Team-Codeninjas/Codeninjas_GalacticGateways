@@ -54,6 +54,9 @@ const Decline = ({modalVisible,onClose,currency}) => {
 
 export default Decline;
 
+const screenHeight = Dimensions.get("window").height;
+const screenWidth = Dimensions.get("window").width;
+
 const styles = StyleSheet.create({
     imageContainer: {
       borderRadius: 34,
@@ -78,8 +81,8 @@ const styles = StyleSheet.create({
         borderColor:"#AA047C",
         borderWidth:3,
         padding: 20,
-        width: "80%", // Adjust the width as needed
-        height: "45%", // Adjust the height as needed
+        width: screenWidth * 0.8, // Adjust the width as needed
+        height: screenHeight * 0.45,// Adjust the height as needed
       },
       // 
     title: {

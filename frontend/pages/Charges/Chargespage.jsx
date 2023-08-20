@@ -9,17 +9,17 @@ import {
   ImageBackground,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { Link } from "expo-router";
-import backimage from "../../images/background.jpg"
-const ChargesPage = () => {
+// import { Link } from "expo-router";
+import backimage from "../../images/background.jpg";
+const ChargesPage = ({navigation}) => {
   const [base_fare, setbase_fare] = useState(3000);
   const [travelTaxrate, settravelTaxrate] = useState(0.2);
-  const [spaceportfee, setspaceportfee] = useState(3000);
-  const [meals, setmeals] = useState(3000);
+  const [spaceportfee, setspaceportfee] = useState(300);
+  const [meals, setmeals] = useState(500);
 
   return (
-    <View > 
-      <ImageBackground source={backimage} resizeMode="cover" style={styles.image}>
+    <View style={styles.containerrr}> 
+      <ImageBackground source={backimage}  style={styles.imageBackground}>
       <View style={styles.container}>
         <Text style={styles.textStyle}>Charges For Your Trip</Text>
       </View>
@@ -85,7 +85,7 @@ const ChargesPage = () => {
         </View>
 
         <View>
-          <TouchableOpacity style={styles.buttonContainer}>
+          <TouchableOpacity style={styles.buttonContainer} onPress={()=>navigation.navigate("Payment")}>  
             <LinearGradient
               colors={["#BD00FF", "rgba(86, 0, 228, 0.69)"]}
               style={styles.button}
@@ -135,8 +135,8 @@ const styles = StyleSheet.create({
   additionalView: {
     flexDirection: "row", // Align items in a row
     alignItems: "center",
-    width: 335,
-    padding: 10,
+    width: screenWidth*0.9,
+    padding: screenWidth*0.03,
 
     borderRadius: 6,
     borderWidth: 2,
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
   additionalText: {
     color: "#FFF",
     fontFamily: "Lato",
-    fontSize: 14,
+    fontSize: 16,
     fontStyle: "normal",
     fontWeight: "900",
   },
@@ -164,6 +164,7 @@ const styles = StyleSheet.create({
     display: "flex",
     alignItems: "center",
     height: screenHeight * 0.82,
+    paddingTop:screenWidth*0.05,
 
     // flex: 1
   },
@@ -175,9 +176,9 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   total: {
-    width: 231,
-    padding: 10,
-    marginTop: 20,
+    width: screenWidth*0.6,
+    padding: screenWidth*0.04,
+    marginTop: screenWidth*0.08,
 
     flexDirection: "row", // Align items in a row
     alignItems: "center",
@@ -188,23 +189,23 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(170, 4, 124, 0.84)",
   },
   totaltext: {
-    marginLeft: 20,
+    marginLeft: screenWidth*0.04,
     color: "#000",
     fontFamily: "Lato",
-    fontSize: 17,
+    fontSize: 18,
     fontStyle: "normal",
     fontWeight: "900",
   },
   totalprice: {
-    marginRight: 20,
+    marginRight: screenWidth*0.04,
     color: "#000",
     fontFamily: "Lato",
-    fontSize: 17,
+    fontSize: 18,
     fontStyle: "normal",
     fontWeight: "900",
   },
   buttonContainer: {
-    marginTop: 20,
+    marginTop: screenWidth*0.1,
   },
   button: {
     width: 301,
@@ -225,12 +226,19 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "#0C0337",
     fontFamily: "Lato",
-    fontSize: 18,
+    fontSize: 19,
     fontWeight: "900",
   },
   imageStyle: {
     width: 25,
     height: 25,
+  },
+  containerrr: {
+    flex: 1, // Ensure the container takes the full screen
+  },
+  imageBackground: {
+    flex: 1, // Ensure the image background takes the full screen
+    resizeMode: 'cover', // Adjust this based on your needs
   },
 });
 

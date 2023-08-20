@@ -39,8 +39,8 @@ const Payment = () => {
   ]);
 
   return (
-    <View > 
-    <ImageBackground source={backimage} resizeMode="cover" style={styles.image}>
+    <View style={styles.containerrr}> 
+      <ImageBackground source={backimage}  style={styles.imageBackground}>
   
       <View style={styles.container}>
         <Text style={styles.textStyle}>Payment Methods</Text>
@@ -150,7 +150,13 @@ justifyContent:"space-evenly",
     fontStyle: 'normal',
     fontWeight: '900',
     marginLeft:10,
-  }
+  }, containerrr: {
+    flex: 1, // Ensure the container takes the full screen
+  },
+  imageBackground: {
+    flex: 1, // Ensure the image background takes the full screen
+    resizeMode: 'cover', // Adjust this based on your needs
+  },
 });
 
 export default Payment;

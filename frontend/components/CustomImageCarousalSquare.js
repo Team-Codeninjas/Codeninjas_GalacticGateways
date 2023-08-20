@@ -18,7 +18,7 @@ import Animated, {
 import Currencyconfirmation from './currencyconfirmation';
 
 
-import { Link } from "expo-router";
+// import { Link } from "expo-router";
 import CurrencyDetails from "./currencyDetails";
 
 // import Pagination from './Pagination';
