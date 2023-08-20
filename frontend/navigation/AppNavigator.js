@@ -1,14 +1,9 @@
 // navigation/AppNavigator.js
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import TicketBookingHome from '../screens/TicketBooking/TicketBookingHome';
 import TicketBookingDetails from '../screens/TicketBooking/TicketBookingDetails';
-// import React from "react";
-// import { createStackNavigator } from "@react-navigation/stack";
-// import TicketBookingHome from "../screens/TicketBooking/TicketBookingHome";
-// import TicketBookingDetails from "../screens/TicketBooking/TicketBookingDetails";
+import TicketBookingHome from '../screens/TicketBooking/TicketBookingHome';
 import Payment from "../pages/Payment";
-import CustomImageCarousal from "../components/CustomImageCarousalSquare";
 import TicketPage from "../screens/ticketDownload/TicketPage";
 import Details from "../pages/Details";
 import Home from "../pages/Home";
