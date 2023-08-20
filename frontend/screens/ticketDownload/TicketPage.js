@@ -8,6 +8,7 @@ import {
   Image,
   FlatList,
 } from "react-native";
+import { useNavigation } from "@react-navigation/core";
 import React, { useEffect, useState } from "react";
 import backgroundImage from "../../images/background.jpg";
 import ModalPopup from "../../components/ModalPopup";
@@ -16,6 +17,8 @@ import Data from "../../api/Data";
 const TicketPage = () => {
   const [visible, setVisible] = useState(false);
   const [cardData, setCardData] = useState(Data);
+  const navigation = useNavigation();
+
 
   useEffect(() => {
     setCardData(Data);
@@ -125,7 +128,7 @@ const TicketPage = () => {
             <View style={{ marginBottom: 20 }}>
               <TouchableOpacity
                 onPress={() => {
-                  alert("See more datails...");
+navigation.navigate("Details");
                 }}
               >
                 <Text
@@ -237,17 +240,19 @@ const styles = StyleSheet.create({
   },
   textBackground: {
     backgroundColor: "rgba(38, 29, 41,0.6)",
-    paddingTop: 30,
+    paddingTop: 60,
     width: "100%",
     height: 150,
     borderColor: "#BD00FF",
     borderBottomWidth: 2,
+    
   },
   subtitleText: {
     paddingLeft: 15,
     color: "#fff",
     fontSize: 28,
     fontWeight: "bold",
+    elevation:999999,
   },
   ticketContainer: {
     position: "relative",
@@ -263,6 +268,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     display: "flex",
     paddingTop: 20,
+    zIndex:55555,
   },
   buttonContainer: {
     position: "relative",
@@ -292,7 +298,7 @@ const styles = StyleSheet.create({
     height: 200,
     display: "flex",
     right: 10,
-    top: "-500px",
+    top: 18,
   },
 });
 export default TicketPage;

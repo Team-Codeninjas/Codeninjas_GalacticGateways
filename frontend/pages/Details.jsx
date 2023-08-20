@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
     resizeMode: 'cover', // Adjust this based on your needs
   },middle:{
     backgroundColor: "rgba(217, 217, 217, 0.5)",
-    height:screenHeight*0.8,
+    height:screenHeight*0.75,
     width:screenWidth*0.85,
     padding:10,
   },left:{
