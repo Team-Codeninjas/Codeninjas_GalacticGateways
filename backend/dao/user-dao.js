@@ -13,6 +13,9 @@ const userSchema = new mongoose.Schema({
     starcomm_addr: {
         type: String,
         required: true,
+    },
+    image_path: {
+        type: String,
     }
 }, {
     timestamps: true

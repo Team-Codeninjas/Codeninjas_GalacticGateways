@@ -13,6 +13,9 @@ const monetarySchema = new mongoose.Schema({
     balance: {
         type: Number,
         required: true,
+    },
+    image_path: {
+        type: String,
     }
 }, {
     timestamps: true

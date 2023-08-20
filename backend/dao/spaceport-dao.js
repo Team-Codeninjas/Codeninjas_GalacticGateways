@@ -12,6 +12,9 @@ const spaceportSchema = new mongoose.Schema({
     },
     service_charge: {
         type: Number,
+    },
+    image_path: {
+        type: String,
     }
 }, {
     timestamps: true
