@@ -1,4 +1,4 @@
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View,StatusBar } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Avatar, Text } from "react-native-paper";
@@ -34,6 +34,7 @@ const Home = () => {
           </LinearGradient>
         </View>
       </View>
+      <StatusBar backgroundColor='#000' barStyle='light-content' />
     </SafeAreaView>
   );
 };

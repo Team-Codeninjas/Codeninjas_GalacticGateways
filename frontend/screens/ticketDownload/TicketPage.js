@@ -14,6 +14,7 @@ import backgroundImage from "../../images/background.jpg";
 import ModalPopup from "../../components/ModalPopup";
 import Data from "../../api/Data";
 
+
 const TicketPage = () => {
   const [visible, setVisible] = useState(false);
   const [cardData, setCardData] = useState(Data);
@@ -208,8 +209,25 @@ navigation.navigate("Details");
               </Text>
             </View>
           </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => navigation.navigate("Formm")}
+          >
+            <View>
+              <Text
+                style={{
+                  color: "#fff",
+                  textAlign: "center",
+                  fontSize: 18,
+                  textTransform: "uppercase",
+                  fontWeight: "900",
+                }}>
+                Book Another Ticket
+              </Text>
+            </View>
+          </TouchableOpacity>
         </View>
-        <View
+        {/* <View
           style={{
             backgroundColor: "#0C0337",
             width: "100%",
@@ -220,8 +238,8 @@ navigation.navigate("Details");
           <Text style={{ textAlign: "center", color: "#fff", fontSize: 20 }}>
             MENU
           </Text>
-        </View>
-        <StatusBar barStyle='light-content' backgroundColor='#000'/>
+        </View> */}
+        
       </ImageBackground>
     </View>
   );
@@ -274,6 +292,7 @@ const styles = StyleSheet.create({
   buttonContainer: {
     position: "relative",
     display: "flex",
+    gap:15,
     alignItems: "center",
     width: "100%",
     height: "10%",
