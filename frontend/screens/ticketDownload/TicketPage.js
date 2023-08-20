@@ -8,6 +8,7 @@ import {
   Image,
   FlatList,
 } from "react-native";
+import { useNavigation } from "@react-navigation/core";
 import React, { useEffect, useState } from "react";
 import backgroundImage from "../../images/background.jpg";
 import ModalPopup from "../../components/ModalPopup";
@@ -16,6 +17,8 @@ import Data from "../../api/Data";
 const TicketPage = () => {
   const [visible, setVisible] = useState(false);
   const [cardData, setCardData] = useState(Data);
+  const navigation = useNavigation();
+
 
   useEffect(() => {
     setCardData(Data);
@@ -125,7 +128,7 @@ const TicketPage = () => {
             <View style={{ marginBottom: 20 }}>
               <TouchableOpacity
                 onPress={() => {
-                  alert("See more datails...");
+navigation.navigate("Details");
                 }}
               >
                 <Text
