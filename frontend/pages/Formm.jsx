@@ -22,11 +22,13 @@ import { FontAwesome, MaterialIcons, Entypo } from '@expo/vector-icons';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import backgroundImage from "../images/background.jpg";
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useNavigation } from '@react-navigation/core';
 
 const numColumns = 3; // Number of columns in the first row
 const screenWidth = Dimensions.get('window').width;
 
 export default Formm = () => {
+  const navigation=useNavigation();
   const schema = yup.object().shape({
     from: yup.string().required('From is required'),
     to: yup.string().required('Destination is required'),
@@ -439,7 +441,7 @@ export default Formm = () => {
         <View style={[styles.row, { width: screenWidth * 0.5, paddingTop:15,paddingBottom:100 }]}>
           <Button
             title="Compare Trips"
-            onPress={handleSubmit(onSubmit)}
+            onPress={()=>navigation.navigate("TourComparing")}
             color="#5528D6"
           />
         </View>
