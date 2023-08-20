@@ -90,11 +90,14 @@ const TicketBookingHome = ({ route }) => {
       <View style={styles.buttonEarthViews}>
         <View>
           <Button
+          
             icon="airplane-takeoff"
             style={styles.buttonEarth}
             labelStyle={styles.buttonLabel}
           >
-            {selectedFromLocation}
+            <Text numberOfLines={2} style={styles.buttonText}>
+        {selectedFromLocation}
+      </Text>
           </Button>
         </View>
         <View>
@@ -240,19 +243,21 @@ const styles = StyleSheet.create({
     color: "#fff",
     borderRadius: 10,
     minWidth: 100,
-    minHeight: 40,
+    maxWidth:100,
+   
     justifyContent: "center",
   },
   buttonKepler: {
     backgroundColor: "#5528D6",
     color: "#fff",
     borderRadius: 10,
-    minWidth: 100,
+    maxWidth: 100,
     minHeight: 40,
     justifyContent: "center",
   },
   buttonLabel: {
     color: "#fff",
+    
   },
   buttonLabelArrow: {
     color: "#fff",
@@ -303,6 +308,9 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     color: "#fff",
     marginTop: 20,
+  },buttonText: {
+    textAlign: "center",
+    whiteSpace: "normal",
   },
   addFacilityText: {
     color: "#fff",

@@ -11,9 +11,19 @@ const passengersOptions = [
 ];
 
 const locationsOptions = [
-  { label: "Lagos", value: "Lagos" },
-  { label: "Abuja", value: "Abuja" },
-  { label: "Port Harcourt", value: "Port Harcourt" },
+  { label: "Alpha Spaceport (Earth)", value: "Alpha Spaceport (Earth)" },
+  { label: "Theta Spaceport (kepler)", value: "Theta Spaceport (kepler)" },
+  { label: "Starhaven Spaceport (Aetheria)", value: "Starhaven Spaceport (Aetheria)" },
+  { label: "NovaLaunch Hub (Nebulon-9)", value: "NovaLaunch Hub (Nebulon-9)" },
+  { label: "Celestial Gateway (Solaris Prime)", value: "Celestial Gateway (Solaris Prime)" },
+  { label: "Interstellar Nexus (Veridian IV)", value: "Interstellar Nexus (Veridian IV)" },
+  { label: "Astral Launchpad (Luna Terra)", value: "Astral Launchpad (Luna Terra)" },
+  { label: "Galactic Frontier Station (Aquilo Major)", value: "Galactic Frontier Station (Aquilo Major)" },
+  { label: "Nebula Port Authority (Seraphis Minor)", value: "Nebula Port Authority (Seraphis Minor)" },
+  { label: "CosmoLaunch Terminal (Epsilon Eridani)", value: "CosmoLaunch Terminal (Epsilon Eridani)" },
+  { label: "Solarflare Launch Center (Avalon IX)", value: "Solarflare Launch Center (Avalon IX)" },
+  { label: "Orion Outpost (Vortexia)", value: "Orion Outpost (Vortexia)" }
+
 ];
 
 const QuickSearch = () => {

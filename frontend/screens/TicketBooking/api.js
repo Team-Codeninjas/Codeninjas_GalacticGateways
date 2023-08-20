@@ -3,39 +3,39 @@
 const sampleFlightData = [
     {
       id: 1,
-      date: '15 Aug 2023',
+      date: '23 Aug 2023',
       time: '8.45 AM',
       flightType: 'Direct',
       airlineType: 'Airtours Airline',
-      waitTime: '2h 20m',
-      road: 'Earth to MARS'
+      waitTime: '3D 20h',
+      road: 'Alpha to Theta'
     },
     {
       id: 2,
-      date: '16 Aug 2023',
+      date: '26 Aug 2023',
       time: '9.30 AM',
-      flightType: 'Connecting',
+      flightType: 'Direct',
       airlineType: 'Airtours Airline',
-      waitTime: '2h 20m',
-      road: 'Earth to MARS'
+      waitTime: '2D 2h',
+      road: 'Alpha to Theta'
     },
     {
       id: 3,
-      date: '16 Aug 2023',
-      time: '9.30 AM',
-      flightType: 'Connecting',
+      date: '26 Aug 2023',
+      time: '11.30 AM',
+      flightType: 'Direct',
       airlineType: 'Airtours Airline',
-      waitTime: '2h 20m',
-      road: 'Earth to MARS'
+      waitTime: '3D 2h',
+      road: 'Alpha to Theta'
     },
     {
       id: 4,
-      date: '16 Aug 2023',
-      time: '9.30 AM',
-      flightType: 'Connecting',
+      date: '30 Aug 2023',
+      time: '9.30 PM',
+      flightType: 'Direct',
       airlineType: 'Airtours Airline',
-      waitTime: '2h 20m',
-      road: 'Earth to MARS'
+      waitTime: '2D 0h',
+      road: 'Alpha to Theta'
     },
     // Add more sample flight data here...
   ];
