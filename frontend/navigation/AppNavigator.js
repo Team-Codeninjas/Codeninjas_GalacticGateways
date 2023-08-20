@@ -50,6 +50,12 @@ const AppNavigator = () => {
         component={TicketPage}
         options={{ headerShown: false, animation: "slide_from_right" }}
       />
+        <Stack.Screen
+        name="ChargesPage"
+        component={ChargesPage}
+        options={{ headerShown: false, animation: "slide_from_right" }}
+      />
+      
       <Stack.Screen
         name="CompareForm"
         component={Formm}
@@ -66,11 +72,6 @@ const AppNavigator = () => {
         name="TicketBookingDetails"
         component={TicketBookingDetails}
         options={{ headerTitle: '', headerShown: false }}
-      />
-      <Stack.Screen
-        name="ChargesPage"
-        component={ChargesPage}
-        options={{ headerShown: false, animation: "slide_from_right" }}
       />
       <Stack.Screen
         name="Payment"

@@ -49,7 +49,8 @@ const TicketBookingHome = ({ route }) => {
     //   BaggageCapacity: sliderValue,
     //   flights: selectedFlightDetails,
     // };
-    alert(JSON.stringify(selectedFlightDetails, null, 2));
+    // alert(JSON.stringify(selectedFlightDetails, null, 2));
+    navigation.navigate("ChargesPage",{selectedFlightDetails});
   };
 
   const toggleContainerPressed = (id) => {
