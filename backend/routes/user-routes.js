@@ -2,7 +2,7 @@ const router = require("express").Router();
 const userFunc = require("../controllers/user-controller.js");
 
 router.get("/", (req, res) => {
-    userFunc.getAllUsers(req, res);
+    userFunc.getUserByID(req, res);
 });
 
 router.post("/", (req, res) => {
