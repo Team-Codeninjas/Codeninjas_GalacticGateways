@@ -25,6 +25,11 @@ const AppNavigator = () => {
     //   }}
     >
       <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{ headerShown: false, animation: "slide_from_bottom" }}
+      />
+      <Stack.Screen
         name="TicketBookingHome"
         component={TicketBookingHome}
         options={{ headerTitle: "", headerShown: false }}
@@ -39,11 +44,7 @@ const AppNavigator = () => {
         component={Form}
         options={{ headerTitle: '', headerShown: false }}
       />
-      <Stack.Screen
-        name="Home"
-        component={Home}
-        options={{ headerShown: false, animation: "slide_from_bottom" }}
-      />
+      
       <Stack.Screen
         name="ChargesPage"
         component={ChargesPage}
