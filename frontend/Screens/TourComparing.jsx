@@ -153,7 +153,10 @@ const style = StyleSheet.create({
         flex: 1, 
         flexDirection: 'row', 
         display: 'flex',
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
+        alignItems:'center',
+        justifyContent:'center',
+        marginTop:20
     },
     outerContainer:{
         flex: 1, 
