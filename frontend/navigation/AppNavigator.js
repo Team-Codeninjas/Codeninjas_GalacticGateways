@@ -1,4 +1,9 @@
 // navigation/AppNavigator.js
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
+import TicketBookingHome from '../screens/TicketBooking/TicketBookingHome';
+import TicketBookingDetails from '../screens/TicketBooking/TicketBookingDetails';
+import Form from '../pages/Form';
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import TicketBookingHome from "../screens/TicketBooking/TicketBookingHome";
@@ -26,7 +31,12 @@ const AppNavigator = () => {
       <Stack.Screen
         name="TicketBookingDetails"
         component={TicketBookingDetails}
-        options={{ headerTitle: "", headerShown: false }}
+        options={{ headerTitle: '', headerShown: false }}
+      />
+      <Stack.Screen
+        name="CompareForm"
+        component={Form}
+        options={{ headerTitle: '', headerShown: false }}
       />
       <Stack.Screen
         name="Home"
