@@ -65,10 +65,10 @@ const ScreenOne = () => {
 
 
     return (
-        <View style={{ flex: 1, backgroundColor: '#0C0337' }}>
+        <View style={style.outerContainer}>
             <View style={style.upperContainer}>
                 <View style={{ flex: 1}}>
-                    <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
+                    <View style={style.upperIconContainer}>
                         <View>
                             <Ionicons name='rocket' size={32} color='white' />
                         </View>
@@ -77,8 +77,8 @@ const ScreenOne = () => {
                         </View>
                     </View>
                 </View>
-                <View style={{ flex: 1, justifyContent: 'center' }}>
-                    <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
+                <View style={{ flex:1 }}>
+                    <View style={style.upperIconContainer}>
                         <View>
                             <Ionicons name='rocket' size={32} color='white' />
                         </View>
@@ -88,17 +88,16 @@ const ScreenOne = () => {
                     </View>
                 </View>
             </View>
-            <View style={{ flex: 8, backgroundColor: '#0C0337' }}>
+            <View style={style.cardArrayContainer}>
                 <View>
                     <ScrollView >
-                        <View style={{ flex: 1, flexDirection: 'row', display: 'flex', flexWrap: 'wrap' }}>
+                        <View style={style.cardArrayInnerContainer}>
                             {cardArray}
                         </View>
-
                     </ScrollView>
                 </View>
             </View>
-            <View style={{ flex: 0.7, backgroundColor: '#1975D3', justifyContent: 'center', alignItems: 'center' }}>
+            <View style={style.bottomContainer}>
                 <View>
                     <Button mode="contained" onPress={() => { setLoadMore(true) }} style={style.button}>
                         Load More
@@ -128,11 +127,32 @@ const style = StyleSheet.create({
         alignItems: 'center',
         alignContent: 'center',
     },
+    upperIconContainer:{
+        flexDirection: 'row', 
+        justifyContent: 'center'
+    },
     text: {
         color: 'white',
     },
     bottomContainer: {
-
+        flex: 0.7, 
+        backgroundColor: '#1975D3', 
+        justifyContent: 'center', 
+        alignItems: 'center'
+    },
+    cardArrayContainer:{
+        flex: 8, 
+        backgroundColor: '#0C0337' 
+    },
+    cardArrayInnerContainer:{
+        flex: 1, 
+        flexDirection: 'row', 
+        display: 'flex',
+        flexWrap: 'wrap'
+    },
+    outerContainer:{
+        flex: 1, 
+        backgroundColor: '#0C0337' 
     }
 })
 

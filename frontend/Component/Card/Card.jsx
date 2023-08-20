@@ -17,9 +17,9 @@ const CardOne = (props) => {
     {/* <Card.Title title="Card Title" subtitle="Card Subtitle" left={LeftContent} /> */}
     <Card.Cover style={styles.image} source={{ uri: 'https://picsum.photos/700' }} />
     <Card.Content>
-      <Text variant="bodyLarge"><Entypo name="time-slot" size={18} color="black" /> Departure Time</Text>
+      <Text variant="bodyLarge"><Ionicons name="time-outline" size={18} color="black" /> Departure Time</Text>
       <Text variant="bodySmall">{props.details.deptTime}</Text>
-      <Text variant="bodyLarge"><Ionicons name="time-outline" size={20} color="black" /> Travel Time</Text>
+      <Text variant="bodyLarge"><Entypo name="time-slot" size={18} color="black" /> Travel Time</Text>
       <Text variant="bodySmall"> {props.details.TravelTime}</Text>
       <Text variant="bodyLarge"> <FontAwesome name="money" size={20} color="black" /> Travel Fee</Text>
       <Text variant="bodySmall"> {props.details.TravelFee}</Text>
