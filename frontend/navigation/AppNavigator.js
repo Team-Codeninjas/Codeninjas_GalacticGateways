@@ -30,16 +30,17 @@ const AppNavigator = () => {
         component={CustomImageCarousal}
         options={{ headerShown: false, animation: "slide_from_right" }}
       /> */}
+      <Stack.Screen
+      name="TicketBookingHome"
+      component={TicketBookingHome}
+      options={{ headerTitle: "", headerShown: false }}
+    />
     <Stack.Screen
       name="TourComparing"
       component={TourComparing}
       options={{ headerTitle: "", headerShown: false }}
     />
-    <Stack.Screen
-      name="TicketBookingHome"
-      component={TicketBookingHome}
-      options={{ headerTitle: "", headerShown: false }}
-    />
+    
       <Stack.Screen
         name="Home"
         component={Home}
@@ -55,7 +56,6 @@ const AppNavigator = () => {
         component={ChargesPage}
         options={{ headerShown: false, animation: "slide_from_right" }}
       />
-      
       <Stack.Screen
         name="CompareForm"
         component={Formm}
