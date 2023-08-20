@@ -21,6 +21,10 @@ const scheduleSchema = new mongoose.Schema({
     arrival_time: {
         type: Date,
         required: true,
+    },
+    travel_mode: {
+        type: String,
+        required: true,
     }
 }, {
     timestamps: true
