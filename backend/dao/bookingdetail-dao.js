@@ -9,6 +9,18 @@ const bookingDetailSchema = new mongoose.Schema({
     schedule_id: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
+    },
+    seat_ids: {
+        type: [mongoose.Schema.Types.ObjectId],
+        required: true,
+    },
+    monetary_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+    },
+    total_charge: {
+        type: Number,
+        required: true,
     }
 }, {
     timestamps: true
