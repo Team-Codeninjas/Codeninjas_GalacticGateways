@@ -3,6 +3,12 @@ import TourCard from "../components/card";
 import { Avatar, Button, Card, Text } from 'react-native-paper';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useState, useEffect } from "react";
+import { FontAwesome } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
+import { Image } from "react-native";
+
+import rocketImage from "../assets/rocket.png"
+
 const TourComparing = () => {
     const [loadMore, setLoadMore] = useState(false);
 
@@ -17,38 +23,37 @@ const TourComparing = () => {
             deptTime: '10:55PM - 11:15PM',
             TravelTime: '9 days 5  hours',
             TravelFee: '$3,000,000,000',
-            Spaceport: 'Jupiter-Citadal',
-            image:'port1'
+            type: 'express',
+            image: 'port1'
         },
         {
             deptTime: '11:05PM - 11:15PM',
             TravelTime: '7 days 12 hours',
             TravelFee: '$2,250,000,000',
-            Spaceport: 'Mars-vemus',
-            image:'port2'
+            type: 'interplanet',
+            image: 'port2'
         },
         {
             deptTime: '10:55PM - 11:15PM',
             TravelTime: '7 days 12 hours',
             TravelFee: '$2,250,000,000',
-            Spaceport: 'Uranus-vivan',
-            image:'port3'
+            type: 'express',
+            image: 'port3'
         },
         {
             deptTime: '9.00AM - 9.15AM',
             TravelTime: '6 days 6 hours',
             TravelFee: '$ 930,000,000',
-            Spaceport: 'Zerpa-novex',
-            image:'port4'
+            type: 'interplanet',
+            image: 'port4'
         },
         {
             deptTime: '2.00PM - 2.15PM',
             TravelTime: '10 days 6 hours',
             TravelFee: '$4,930,000,000',
-            Spaceport: 'Xorse-zampa',
-            image:'port5'
-        },
-       
+            type: 'express',
+            image: 'port5'
+        }
     ];
 
     if (loadMore) {
@@ -60,7 +65,7 @@ const TourComparing = () => {
             )
         }
     } else {
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < 2; i++) {
             cardArray.push(
                 <View style={style.card}>
                     <TourCard details={cards[i]} />
@@ -73,26 +78,18 @@ const TourComparing = () => {
     return (
         <View style={style.outerContainer}>
             <View style={style.upperContainer}>
-                <View style={{ flex: 1}}>
-                    <View style={style.upperIconContainer}>
-                        <View>
-                            <Ionicons name='rocket' size={32} color='white' />
-                        </View>
-                        <View>
-                            <Text variant="titleMedium" style={style.text}>  Tour One</Text>
-                        </View>
+                <View style={{top:15}}>
+                    <Image source={rocketImage} style={{ width: 100, height: 100 }} />
+                </View>
+                <View style={{top:15}}>
+                    <View>
+                        <Text variant="headlineMedium" style={style.upperTextContainer}>Compare and Tour</Text>
+                    </View>
+                    <View>
+                        <Text variant="labelMedium">Discover.Decide.Depart</Text>
                     </View>
                 </View>
-                <View style={{ flex:1 }}>
-                    <View style={style.upperIconContainer}>
-                        <View>
-                            <Ionicons name='rocket' size={32} color='white' />
-                        </View>
-                        <View>
-                            <Text variant="titleMedium" style={style.text}>  Tour Two</Text>
-                        </View>
-                    </View>
-                </View>
+
             </View>
             <View style={style.cardArrayContainer}>
                 <View>
@@ -104,10 +101,8 @@ const TourComparing = () => {
                 </View>
             </View>
             <View style={style.bottomContainer}>
-                <View>
-                    <Button mode="contained" onPress={() => { setLoadMore(true) }} style={style.button}>
-                        Load More
-                    </Button>
+                <View style={{ marginBottom: 10 }}>
+                    <Button mode="outlined" onPress={() => { setLoadMore(true) }} style={style.button} theme={{ colors: { primary: 'white' } }}><AntDesign name="reload1" size={18} color="white" />  Load More</Button>
                 </View>
             </View>
         </View>
@@ -115,53 +110,47 @@ const TourComparing = () => {
 }
 
 const style = StyleSheet.create({
-    card: {
-        marginHorizontal: 12,
-        marginVertical: 7
-    },
     button: {
         width: 200,
-        backgroundColor: '#0C0337'
+        borderColor: 'white',
+        color: 'white'
     },
     upperContainer: {
-        flex: 1.25,
+        flex: 1.5,
         flexDirection: 'row',
         justifyContent: 'center',
         backgroundColor: '#1975D3',
-        borderBottomRightRadius: 30,
-        borderBottomLeftRadius: 30,
         alignItems: 'center',
         alignContent: 'center',
+        paddingTop:20
     },
-    upperIconContainer:{
-        flexDirection: 'row', 
-        justifyContent: 'center'
+    upperTextContainer: {
+        color: 'white',
+        fontWeight: '900'
     },
     text: {
         color: 'white',
     },
     bottomContainer: {
-        flex: 0.7, 
-        backgroundColor: '#1975D3', 
-        justifyContent: 'center', 
+        flex: 1.2,
+        backgroundColor: '#1975D3',
+        justifyContent: 'center',
         alignItems: 'center'
     },
-    cardArrayContainer:{
-        flex: 8, 
-        backgroundColor: '#0C0337' 
+    cardArrayContainer: {
+        flex: 8,
+        backgroundColor: '#0C0337',
+        alignItems: 'center'
     },
-    cardArrayInnerContainer:{
-        flex: 1, 
-        flexDirection: 'row', 
+    cardArrayInnerContainer: {
+        flex: 1,
+        flexDirection: 'column',
         display: 'flex',
         flexWrap: 'wrap',
-        alignItems:'center',
-        justifyContent:'center',
-        marginTop:20
     },
-    outerContainer:{
-        flex: 1, 
-        backgroundColor: '#0C0337' 
+    outerContainer: {
+        flex: 1,
+        backgroundColor: '#0C0337'
     }
 })
 
