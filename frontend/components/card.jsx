@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   },
   cardContainer: {
     borderWidth: 2,
-    borderColor: '#1975D3',
+    borderColor: '#8E44AD',
   },
   image: {
     height: windowHeight * 0.165,
