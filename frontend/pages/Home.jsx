@@ -1,4 +1,4 @@
-import { StyleSheet, View,StatusBar } from "react-native";
+import { StyleSheet, View,StatusBar,Text } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Avatar } from "react-native-paper";
