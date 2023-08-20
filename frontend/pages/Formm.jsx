@@ -445,7 +445,7 @@ export default Formm = () => {
             color="#5528D6"
           />
         </View>
-      <StatusBar backgroundColor='purple' barStyle='light-content' />
+      <StatusBar backgroundColor='#000' barStyle='light-content' />
 
       </ImageBackground>
       </SafeAreaView>

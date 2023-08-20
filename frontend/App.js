@@ -11,6 +11,7 @@ import Details from "./pages/Details";
 import Home from "./pages/Home";
 import TicketPage from "./screens/ticketDownload/TicketPage";
 import { FontAwesome } from "@expo/vector-icons";
+import TourComparing from "./screens/TourComparing";
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -37,7 +38,11 @@ const HomeNavigator = () => {
         component={Formm}
         options={{ headerTitle: "", headerShown: false }}
       />
-    
+      <Stack.Screen
+      name="TourComparing"
+      component={TourComparing}
+      options={{ headerTitle: "", headerShown: false }}
+    />
       
       
     </Stack.Navigator>
@@ -50,11 +55,17 @@ const ExploreNavigator = () => {
     //     headerShown: false // Hide the header for all screens in this navigator
     //   }}
     >
+      
       <Stack.Screen
         name="TicketBookingHome"
         component={TicketBookingHome}
         options={{ headerTitle: "", headerShown: false }}
       />
+     <Stack.Screen
+      name="TourComparing"
+      component={TourComparing}
+      options={{ headerTitle: "", headerShown: false }}
+    />
       <Stack.Screen
         name="TicketBookingDetails"
         component={TicketBookingDetails}
@@ -85,8 +96,8 @@ const BottomTab = () => {
   return (
     <Tab.Navigator>
       <Tab.Screen
-        name="Form"
-        component={Formm}
+        name="Home"
+        component={HomeNavigator}
         options={{
           headerShown: false,
           tabBarIcon: ({ focused, size }) => (

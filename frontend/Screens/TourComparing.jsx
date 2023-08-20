@@ -47,7 +47,8 @@ const TourComparing = () => {
             TravelFee: '$4,930,000,000',
             Spaceport: 'Xorse-zampa',
             image:'port5'
-        }
+        },
+       
     ];
 
     if (loadMore) {
