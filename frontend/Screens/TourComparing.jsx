@@ -119,7 +119,7 @@ const style = StyleSheet.create({
         flex: 1.5,
         flexDirection: 'row',
         justifyContent: 'center',
-        backgroundColor: '#1975D3',
+        backgroundColor: '#8E44AD',
         alignItems: 'center',
         alignContent: 'center',
         paddingTop:20
@@ -133,13 +133,13 @@ const style = StyleSheet.create({
     },
     bottomContainer: {
         flex: 1.2,
-        backgroundColor: '#1975D3',
+        backgroundColor: '#8E44AD',
         justifyContent: 'center',
         alignItems: 'center'
     },
     cardArrayContainer: {
         flex: 8,
-        backgroundColor: '#0C0337',
+        backgroundColor: ' #301934',
         alignItems: 'center'
     },
     cardArrayInnerContainer: {
@@ -150,7 +150,7 @@ const style = StyleSheet.create({
     },
     outerContainer: {
         flex: 1,
-        backgroundColor: '#0C0337'
+        backgroundColor: '#301934'
     }
 })
 

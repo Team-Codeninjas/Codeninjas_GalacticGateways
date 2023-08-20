@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     padding: 15
   }
   ,typeText:{
-    backgroundColor:'#1975D3',
+    backgroundColor:'#8E44AD',
     paddingTop:5,
     paddingBottom:5,
     paddingLeft:10,
