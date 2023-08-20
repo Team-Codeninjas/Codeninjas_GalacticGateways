@@ -140,7 +140,13 @@ const TicketPage = () => {
               </TouchableOpacity>
             </View>
             <View style={{ alignItems: "center" }}>
-              <Text>Order No:D5754ADFA7842</Text>
+            <FlatList
+                data={Data}
+                keyExtractor={(item) => item.id.toString()}
+                renderItem={({item})=>(
+                  <Text>Order No: {item.orderNo}</Text>
+                )}
+              />
               <FlatList
                 data={Data}
                 keyExtractor={(item) => item.id.toString()}
@@ -150,7 +156,6 @@ const TicketPage = () => {
                 style={{ width: 300, height: 60 }}/>
                 )}
               />
-              
             </View>
           </View>
         </View>
