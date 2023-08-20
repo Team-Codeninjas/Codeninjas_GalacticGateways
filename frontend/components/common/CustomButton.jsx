@@ -1,11 +1,14 @@
 import React from "react";
 import { Text, TouchableOpacity, StyleSheet } from "react-native";
 import Colors from "../../constants/Colors";
+import { useNavigation } from '@react-navigation/core';
+
 
 const CustomButton = ({ onPress, title, disabled, ...otherProps }) => {
+  const navigation= useNavigation();
   return (
     <TouchableOpacity
-      onPress={onPress}
+      onPress={()=>navigation.navigate("CompareForm")}
       disabled={disabled}
       style={[styles.container, otherProps.style]}
     >
