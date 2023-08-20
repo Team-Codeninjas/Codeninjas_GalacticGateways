@@ -4,8 +4,6 @@ import {
   Text,
   TextInput,
   Button,
-  Pressable,
-  Modal,
   StyleSheet,
   ScrollView,
   Dimensions,
@@ -16,13 +14,13 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { FontAwesome, MaterialIcons, Entypo } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
 const numColumns = 3; // Number of columns in the first row
 const screenWidth = Dimensions.get('window').width;
 
-export default Form = () => {
+const Formm = () => {
   const schema = yup.object().shape({
     from: yup.string().required('From is required'),
     to: yup.string().required('To is required'),
@@ -411,6 +409,8 @@ export default Form = () => {
     </LinearGradient>
   );
 };
+
+export default Formm;
 
 const styles = StyleSheet.create({
   container: {

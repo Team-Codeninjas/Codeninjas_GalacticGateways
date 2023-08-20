@@ -7,10 +7,12 @@ import {
   View,
   TouchableOpacity,
   ScrollView,
+  ImageBackground
 } from "react-native";
 import { Button } from "react-native-paper";
 import { StatusBar } from "expo-status-bar";
 import { fetchFlightData } from "./api";
+import backgroundImage from "../../images/background.jpg";
 
 const TicketBookingHome = ({ route }) => {
   const [flightData, setFlightData] = useState([]);
@@ -70,6 +72,10 @@ const TicketBookingHome = ({ route }) => {
 
   return (
     <View style={styles.container}>
+      <ImageBackground
+        source={backgroundImage}
+        resizeMode="cover"
+        style={styles.image}>
       <View style={styles.buttonEarthViews}>
         <View>
           <Button
@@ -189,6 +195,7 @@ const TicketBookingHome = ({ route }) => {
         <Text style={{ color: "white" }}>Slider Value: {sliderValue}</Text>
       </View> */}
       <StatusBar style="auto" />
+      </ImageBackground>
     </View>
   );
 };
@@ -196,10 +203,10 @@ const TicketBookingHome = ({ route }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#040939",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 5,
+    // backgroundColor: "#040939",
+    // alignItems: "center",
+    // justifyContent: "center",
+    // padding: 5,
   },
   scrollView: {
     minHeight: 220,
@@ -273,7 +280,7 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
   button4container: {
-    backgroundColor: "transparent", // Set background to transparent
+    backgroundColor: "#0C0337", // Set background to transparent
     borderColor: "#fff", // Add white border
     borderWidth: 1,
     minWidth: 320,
@@ -289,7 +296,7 @@ const styles = StyleSheet.create({
     marginTop: 25,
   },
   button5container: {
-    backgroundColor: "#1E2138",
+    backgroundColor: "#0C0337",
     color: "#fff",
     marginTop: 20, // Add any additional styling you need
     borderRadius: 10,
@@ -297,13 +304,13 @@ const styles = StyleSheet.create({
     minWidth: 320,
   },
   button6container: {
-    backgroundColor: "#1E2138",
+    backgroundColor: "#0C0337",
     borderRadius: 10,
     minWidth: 320,
     marginBottom: 15,
   },
   button7container: {
-    backgroundColor: "#1E2138",
+    backgroundColor: "#0C0337",
     borderRadius: 10,
     minWidth: 320,
     marginBottom: 15,
@@ -318,6 +325,13 @@ const styles = StyleSheet.create({
     minHeight: 45,
     justifyContent: "center",
   },
+  image:{
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    resizeMode: "cover",
+    width: "100%",
+  }
 });
 
 export default TicketBookingHome;

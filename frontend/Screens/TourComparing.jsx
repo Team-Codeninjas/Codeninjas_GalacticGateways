@@ -1,5 +1,5 @@
 import { View, ScrollView, StyleSheet } from "react-native";
-import TourCard from "../component/card";
+import TourCard from "../components/card";
 import { Avatar, Button, Card, Text } from 'react-native-paper';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useState, useEffect } from "react";
