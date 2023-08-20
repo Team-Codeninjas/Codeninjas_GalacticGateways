@@ -22,7 +22,7 @@ import Currencyconfirmation from './currencyconfirmation';
 import CurrencyDetails from "./currencyDetails";
 
 // import Pagination from './Pagination';
-const CustomImageCarousal = ({ data, pagiation }) => {
+const CustomImageCarousal = ({ data, pagiation,navigation }) => {
   const scrollViewRef = useAnimatedRef(null);
   const interval = useRef();
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
@@ -57,6 +57,9 @@ const CustomImageCarousal = ({ data, pagiation }) => {
   const onModalClose2 = () => {
     setModalVisible2(false);
   };
+  const showdetails=()=>{
+    
+  }
 
   const handleImagePress = (index,item) => {
     setSelectedImageIndex(index);
@@ -68,6 +71,11 @@ const CustomImageCarousal = ({ data, pagiation }) => {
   const onproceClose=()=>{
     setModalVisible(false);
     setModalVisible2(true);
+
+  }
+
+  const onconfirmclose=()=>{
+    setModalVisible2(false);
 
   }
 
@@ -124,7 +132,7 @@ const CustomImageCarousal = ({ data, pagiation }) => {
     <CurrencyDetails modalVisible={modalVisible} onClose={onModalClose} currency={curency} balance={balance} onproceClose={onproceClose}>
 
     </CurrencyDetails>
-    <Currencyconfirmation modalVisible={modalVisible2} onClose={onModalClose2} currency={curency} >
+    <Currencyconfirmation modalVisible={modalVisible2} onClose={onModalClose2} currency={curency} onconfirmclose={onconfirmclose} showdetails={()=>navigation.navigate("Details")}>
 
 </Currencyconfirmation>
 

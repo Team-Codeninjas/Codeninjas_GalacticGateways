@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { Modal, View, Text, Pressable, StyleSheet ,TouchableWithoutFeedback,TouchableOpacity,Image} from 'react-native';
 
-const Currencyconfirmation = ({modalVisible,onClose,currency}) => {
+const Currencyconfirmation = ({modalVisible,onClose,currency,onconfirmclose,showdetails}) => {
 
     const[proceedstatus,setproceed]=useState(false);
     const proceed=()=>{
-        setproceed(true);
+      onconfirmclose(); 
 
+    }
+
+    const Detailsfunc=()=>{
+     
+      showdetails();
     }
     return (
         <Modal animationType="fade" transparent={true} visible={modalVisible} >
@@ -39,7 +44,7 @@ const Currencyconfirmation = ({modalVisible,onClose,currency}) => {
            
            </View>
            <View style={{display:'flex',justifyContent:'center',alignItems:'center',height:"40%"}} >
-          <TouchableOpacity style={styles.buttonContainer} onPress={proceed} >
+          <TouchableOpacity style={styles.buttonContainer } onPress={Detailsfunc} >
       <Text style={styles.buttonText}>CONFIRM</Text>
     </TouchableOpacity>
           </View>

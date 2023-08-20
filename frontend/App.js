@@ -4,6 +4,7 @@ import ChargesPage from "./pages/Charges/Chargespage";
 import Payment from "./pages/Payment";
 import { Button, StyleSheet, Text, View } from "react-native";
 import Details from "./pages/Details";
+import CustomImageCarousal from "./components/CustomImageCarousalSquare";
 
 
 const Stack=createNativeStackNavigator();
@@ -12,9 +13,13 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={Details} options={{ headerShown: false ,animation: 'slide_from_bottom'}}  />
+        <Stack.Screen name="Home" component={ChargesPage} options={{ headerShown: false ,animation: 'slide_from_bottom'}}  />
       
         <Stack.Screen name="Payment" component={Payment}  options={{ headerShown: false,animation: 'slide_from_right' }}/>
+        <Stack.Screen name="CustomImageCarousal" component={CustomImageCarousal}  options={{ headerShown: false,animation: 'slide_from_right' }}/>
+
+        <Stack.Screen name="Details" component={Details}  options={{ headerShown: false,animation: 'slide_from_right' }}/>
+
       </Stack.Navigator>
     </NavigationContainer>
   );
