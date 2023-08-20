@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import backgroundImage from "../../images/background.jpg";
-import ModalPopup from "../../component/ModalPopup";
+import ModalPopup from "../../components/ModalPopup";
 import Data from "../../api/Data";
 
 const TicketPage = () => {

@@ -15,7 +15,6 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={ChargesPage} options={{ headerShown: false ,animation: 'slide_from_bottom'}}  />
-      
         <Stack.Screen name="Payment" component={Payment}  options={{ headerShown: false,animation: 'slide_from_right' }}/>
         <Stack.Screen name="CustomImageCarousal" component={CustomImageCarousal}  options={{ headerShown: false,animation: 'slide_from_right' }}/>
         <Stack.Screen name="Ticket" component={TicketPage}  options={{ headerShown: false,animation: 'slide_from_right' }}/>
