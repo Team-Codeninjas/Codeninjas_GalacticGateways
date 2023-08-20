@@ -1,4 +1,3 @@
-
 import AppNavigator from './navigation/AppNavigator';
 
 import React from 'react'
