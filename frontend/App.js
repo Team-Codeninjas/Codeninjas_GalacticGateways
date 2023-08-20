@@ -1,14 +1,12 @@
-import AppNavigator from './navigation/AppNavigator';
+import AppNavigator from "./navigation/AppNavigator";
 
-import React from 'react'
+import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import { Button, StyleSheet, Text, View,StyleSheet } from "react-native";
+import { Button, StyleSheet, Text, View, StyleSheet } from "react-native";
 
-
-const Stack=createNativeStackNavigator();
-
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
@@ -20,10 +18,7 @@ const App = () => {
 
 export default App;
 
-
 const styles = StyleSheet.create({
-  container: {
-
-  },
+  container: {},
 });
 
