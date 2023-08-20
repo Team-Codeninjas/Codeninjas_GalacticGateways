@@ -7,6 +7,7 @@ import { Button, StyleSheet, Text, View,StyleSheet } from "react-native";
 import Details from "./pages/Details";
 import CustomImageCarousal from "./components/CustomImageCarousalSquare";
 import TicketPage from './screens/ticketDownload/TicketPage'
+import Form from './pages/Form';
 
 const Stack=createNativeStackNavigator();
 
