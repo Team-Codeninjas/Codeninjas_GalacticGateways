@@ -41,7 +41,10 @@ const Payment = () => {
   return (
     <View style={styles.containerrr}> 
       <ImageBackground source={backimage}  style={styles.imageBackground}>
+<<<<<<< Updated upstream
       <Image source={require("../assets/jet.png")} style={styles.jetImg} />
+=======
+>>>>>>> Stashed changes
   
       <View style={styles.container}>
         <Text style={styles.textStyle}>Payment Methods</Text>
@@ -117,6 +120,10 @@ const styles = StyleSheet.create({
   },
   textStyle: {
     color: "#FFF",
+<<<<<<< Updated upstream
+=======
+    fontFamily: "Lato",
+>>>>>>> Stashed changes
     fontSize: 24,
     fontStyle: "normal",
     fontWeight: "800",
@@ -145,6 +152,10 @@ justifyContent:"space-evenly",
 
   },currencyText:{
     color: '#FFF',
+<<<<<<< Updated upstream
+=======
+    fontFamily: 'Lato',
+>>>>>>> Stashed changes
     fontSize: 18,
     fontStyle: 'normal',
     fontWeight: '900',
@@ -155,6 +166,7 @@ justifyContent:"space-evenly",
   imageBackground: {
     flex: 1, // Ensure the image background takes the full screen
     resizeMode: 'cover', // Adjust this based on your needs
+<<<<<<< Updated upstream
   },jetImg: {
     position: "absolute",
     zIndex: 100,
@@ -162,6 +174,8 @@ justifyContent:"space-evenly",
     display: "flex",
     right: 10,
     top: 1,
+=======
+>>>>>>> Stashed changes
   },
 });
 

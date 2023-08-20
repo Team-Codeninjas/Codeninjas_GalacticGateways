@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+<<<<<<< Updated upstream
     "@expo/vector-icons": "^13.0.0",
     "@hookform/resolvers": "^3.2.0",
     "@react-native-community/datetimepicker": "7.2.0",
@@ -37,6 +38,17 @@
     "react-native-web": "~0.19.6",
     "typescript": "^5.1.6",
     "yup": "^1.2.0"
+=======
+    "@react-navigation/native": "^6.1.7",
+    "@react-navigation/native-stack": "^6.9.13",
+    "expo": "~49.0.7",
+    "expo-linear-gradient": "^12.3.0",
+    "expo-router": "^2.0.2",
+    "expo-status-bar": "~1.6.0",
+    "react": "18.2.0",
+    "react-native": "0.72.3",
+    "react-native-reanimated": "^3.3.0"
+>>>>>>> Stashed changes
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import React from "react";
 import AppNavigator from "./navigation/AppNavigator";
 import { NavigationContainer } from "@react-navigation/native";
@@ -13,6 +14,17 @@ import Home from "./pages/Home";
 import TicketPage from "./screens/ticketDownload/TicketPage";
 import { FontAwesome } from "@expo/vector-icons";
 import TourComparing from "./screens/TourComparing";
+=======
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import ChargesPage from "./pages/Charges/Chargespage";
+import Payment from "./pages/Payment";
+import { Button, StyleSheet, Text, View } from "react-native";
+import Details from "./pages/Details";
+
+
+const Stack=createNativeStackNavigator();
+>>>>>>> Stashed changes
 
 import ChargesPage from "./pages/Charges/Chargespage";
 import { Ionicons } from "@expo/vector-icons";
@@ -21,6 +33,7 @@ const Tab = createBottomTabNavigator();
 
 const HomeNavigator = () => {
   return (
+<<<<<<< Updated upstream
     <Stack.Navigator
     // screenOptions={{
     //     headerShown: false // Hide the header for all screens in this navigator
@@ -214,3 +227,20 @@ const App = () => {
 };
 
 export default App;
+=======
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Details} options={{ headerShown: false ,animation: 'slide_from_bottom'}}  />
+      
+        <Stack.Screen name="Payment" component={Payment}  options={{ headerShown: false,animation: 'slide_from_right' }}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+
+  },
+});
+>>>>>>> Stashed changes

@@ -22,7 +22,11 @@ import Currencyconfirmation from './currencyconfirmation';
 import CurrencyDetails from "./currencyDetails";
 
 // import Pagination from './Pagination';
+<<<<<<< Updated upstream
 const CustomImageCarousal = ({ data, pagiation,navigation }) => {
+=======
+const CustomImageCarousal = ({ data, pagiation }) => {
+>>>>>>> Stashed changes
   const scrollViewRef = useAnimatedRef(null);
   const interval = useRef();
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
@@ -57,9 +61,12 @@ const CustomImageCarousal = ({ data, pagiation,navigation }) => {
   const onModalClose2 = () => {
     setModalVisible2(false);
   };
+<<<<<<< Updated upstream
   const showdetails=()=>{
     
   }
+=======
+>>>>>>> Stashed changes
 
   const handleImagePress = (index,item) => {
     setSelectedImageIndex(index);
@@ -74,11 +81,14 @@ const CustomImageCarousal = ({ data, pagiation,navigation }) => {
 
   }
 
+<<<<<<< Updated upstream
   const onconfirmclose=()=>{
     setModalVisible2(false);
 
   }
 
+=======
+>>>>>>> Stashed changes
   return (
     <View>
       <Animated.ScrollView
@@ -132,7 +142,11 @@ const CustomImageCarousal = ({ data, pagiation,navigation }) => {
     <CurrencyDetails modalVisible={modalVisible} onClose={onModalClose} currency={curency} balance={balance} onproceClose={onproceClose}>
 
     </CurrencyDetails>
+<<<<<<< Updated upstream
     <Currencyconfirmation modalVisible={modalVisible2} onClose={onModalClose2} currency={curency} onconfirmclose={onconfirmclose} showdetails={()=>navigation.navigate("Details")}>
+=======
+    <Currencyconfirmation modalVisible={modalVisible2} onClose={onModalClose2} currency={curency} >
+>>>>>>> Stashed changes
 
 </Currencyconfirmation>
 

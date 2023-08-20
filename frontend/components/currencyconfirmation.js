@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, View, Text, Pressable, StyleSheet ,TouchableWithoutFeedback,TouchableOpacity,Image} from 'react-native';
+<<<<<<< Updated upstream
 import { useNavigation } from '@react-navigation/core';
 
 const Currencyconfirmation = ({modalVisible,onClose,currency,onconfirmclose,showdetails}) => {
@@ -16,6 +17,16 @@ const Currencyconfirmation = ({modalVisible,onClose,currency,onconfirmclose,show
      
       navigation.navigate("Ticket")
     }
+=======
+
+const Currencyconfirmation = ({modalVisible,onClose,currency}) => {
+
+    const[proceedstatus,setproceed]=useState(false);
+    const proceed=()=>{
+        setproceed(true);
+
+    }
+>>>>>>> Stashed changes
     return (
         <Modal animationType="fade" transparent={true} visible={modalVisible} >
    <View style={styles.centeredModal}>
@@ -47,7 +58,11 @@ const Currencyconfirmation = ({modalVisible,onClose,currency,onconfirmclose,show
            
            </View>
            <View style={{display:'flex',justifyContent:'center',alignItems:'center',height:"40%"}} >
+<<<<<<< Updated upstream
           <TouchableOpacity style={styles.buttonContainer } onPress={Confimed} >
+=======
+          <TouchableOpacity style={styles.buttonContainer} onPress={proceed} >
+>>>>>>> Stashed changes
       <Text style={styles.buttonText}>CONFIRM</Text>
     </TouchableOpacity>
           </View>
