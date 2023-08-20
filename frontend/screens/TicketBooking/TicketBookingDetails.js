@@ -1,11 +1,13 @@
 import { useNavigation } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import { StyleSheet, View, TouchableOpacity } from "react-native";
+import { StyleSheet, View, TouchableOpacity,ImageBackground } from "react-native";
 import { RadioButton } from "react-native-paper";
 import Slider from "@react-native-community/slider";
 import { Text, Button } from "react-native-paper";
 import { FontAwesome } from "@expo/vector-icons";
+import backgroundImage from "../../images/background.jpg";
+
 const TicketBookingDetails = () => {
   const navigation = useNavigation();
 
@@ -97,6 +99,10 @@ const TicketBookingDetails = () => {
   };
   return (
     <View style={styles.container}>
+      <ImageBackground
+        source={backgroundImage}
+        resizeMode="cover"
+        style={styles.image}>
       <View style={styles.apply}>
         <FontAwesome
           onPress={handleBackButton}
@@ -178,6 +184,7 @@ const TicketBookingDetails = () => {
         </View>
       </View>
       <StatusBar style="auto" />
+      </ImageBackground>
     </View>
   );
 };
@@ -186,9 +193,9 @@ export default TicketBookingDetails;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0C0337",
-    alignItems: "center",
-    justifyContent: "center",
+    // backgroundColor: "#0C0337",
+    // alignItems: "center",
+    // justifyContent: "center",
   },
   headerText: {
     color: "white",
@@ -313,4 +320,11 @@ const styles = StyleSheet.create({
   bookedSeat: {
     backgroundColor: "#777777",
   },
+  image:{
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    resizeMode: "cover",
+    width: "100%",
+  }
 });

@@ -134,6 +134,7 @@ const TicketPage = () => {
                     paddingRight: 30,
                     fontSize: 17,
                     fontWeight: "800",
+                    textDecorationLine:'underline'
                   }}>
                   more details...
                 </Text>

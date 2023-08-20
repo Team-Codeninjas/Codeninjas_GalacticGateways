@@ -4,26 +4,32 @@ import {
   Text,
   TextInput,
   Button,
+  Pressable,
+  Modal,
   StyleSheet,
   ScrollView,
   Dimensions,
   TouchableWithoutFeedback,
+  ImageBackground
 } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { Entypo } from '@expo/vector-icons';
+import { FontAwesome, MaterialIcons, Entypo } from '@expo/vector-icons';
 import DateTimePicker from '@react-native-community/datetimepicker';
+import { StatusBar } from 'expo-status-bar';
+import backgroundImage from "../images/background.jpg";
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const numColumns = 3; // Number of columns in the first row
 const screenWidth = Dimensions.get('window').width;
 
-const Formm = () => {
+export default Formm = () => {
   const schema = yup.object().shape({
     from: yup.string().required('From is required'),
-    to: yup.string().required('To is required'),
+    to: yup.string().required('Destination is required'),
   });
 
   const {
@@ -82,11 +88,22 @@ const Formm = () => {
   };
 
   return (
-    <LinearGradient colors={['#0C0337', '#A660FF']}>
-      <ScrollView contentContainerStyle={styles.container}>
-        {/* <View> */}
-        <Text style={styles.text}>From</Text>
-        {/* </View> */}
+      <SafeAreaView contentContainer Style={styles.container}>
+        <ImageBackground
+        source={backgroundImage}
+        resizeMode="cover"
+        // style={styles.image}
+        >
+        <View style={styles.row}>
+          <Text
+            style={[
+              styles.text,
+              { fontWeight: '500', paddingLeft: 10, fontSize: 16 },
+            ]}
+          >
+            From
+          </Text>
+        </View>
         <View style={styles.row}>
           <View style={styles.column}>
             <Controller
@@ -115,8 +132,15 @@ const Formm = () => {
             />
           </View>
         </View>
-        <View>
-          <Text style={styles.text}>To</Text>
+        <View style={styles.row}>
+          <Text
+            style={[
+              styles.text,
+              { fontWeight: '500', paddingLeft: 10, fontSize: 16 },
+            ]}
+          >
+            To
+          </Text>
         </View>
         <View style={styles.row}>
           <View style={styles.column}>
@@ -146,8 +170,15 @@ const Formm = () => {
             />
           </View>
         </View>
-        <View>
-          <Text style={styles.text}>Option 1</Text>
+        <View style={styles.row}>
+          <Text
+            style={[
+              styles.text,
+              { fontWeight: '500', paddingLeft: 10, fontSize: 16 },
+            ]}
+          >
+            Option 1
+          </Text>
         </View>
         <View style={styles.row}>
           <View style={[styles.column, { paddingRight: 5 }]}>
@@ -271,8 +302,15 @@ const Formm = () => {
             )}
           </View>
         </View>
-        <View>
-          <Text style={styles.text}>Option 2</Text>
+        <View style={styles.row}>
+          <Text
+            style={[
+              styles.text,
+              { fontWeight: '500', paddingLeft: 10, fontSize: 16 },
+            ]}
+          >
+            Option 2
+          </Text>
         </View>
         <View style={styles.row}>
           <View style={[styles.column, { paddingRight: 5 }]}>
@@ -398,27 +436,23 @@ const Formm = () => {
             )}
           </View>
         </View>
-        <View style={{ width: screenWidth * 0.5, paddingTop: 20 }}>
+        <View style={[styles.row, { width: screenWidth * 0.5, paddingTop: 30,paddingBottom:100 }]}>
           <Button
             title="Compare Trips"
             onPress={handleSubmit(onSubmit)}
             color="#5528D6"
           />
         </View>
-      </ScrollView>
-    </LinearGradient>
+      <StatusBar />
+      </ImageBackground>
+      </SafeAreaView>
+
   );
 };
-
-export default Formm;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: screenWidth,
   },
   row: {
     width: screenWidth * 0.95,
@@ -444,5 +478,12 @@ const styles = StyleSheet.create({
   },
   errorMessage: {
     color: '#fab9b9',
-  },
+  },
+// image:{
+//   flex: 1,
+//   alignItems: "center",
+//   justifyContent: "center",
+//   resizeMode: "cover",
+//   width: "100%",
+// }
 });
