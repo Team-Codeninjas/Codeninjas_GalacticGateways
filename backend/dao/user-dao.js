@@ -10,10 +10,6 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    starcomm_addr: {
-        type: String,
-        required: true,
-    },
     image_path: {
         type: String,
     }
