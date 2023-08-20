@@ -41,6 +41,7 @@ const Payment = () => {
   return (
     <View style={styles.containerrr}> 
       <ImageBackground source={backimage}  style={styles.imageBackground}>
+      <Image source={require("../assets/jet.png")} style={styles.jetImg} />
   
       <View style={styles.container}>
         <Text style={styles.textStyle}>Payment Methods</Text>
@@ -156,6 +157,13 @@ justifyContent:"space-evenly",
   imageBackground: {
     flex: 1, // Ensure the image background takes the full screen
     resizeMode: 'cover', // Adjust this based on your needs
+  },jetImg: {
+    position: "absolute",
+    zIndex: 100,
+    height: 200,
+    display: "flex",
+    right: 10,
+    top: 1,
   },
 });
 
