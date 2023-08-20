@@ -211,7 +211,7 @@ navigation.navigate("Details");
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => navigation.navigate("Formm")}
+            onPress={() => navigation.navigate("Home")}
           >
             <View>
               <Text

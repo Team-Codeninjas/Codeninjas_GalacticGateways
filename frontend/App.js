@@ -14,6 +14,7 @@ import TicketPage from "./screens/ticketDownload/TicketPage";
 import { FontAwesome } from "@expo/vector-icons";
 import TourComparing from "./screens/TourComparing";
 import ChargesPage from "./pages/Charges/Chargespage";
+import { Ionicons } from "@expo/vector-icons";
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -24,7 +25,6 @@ const HomeNavigator = () => {
     //     headerShown: false // Hide the header for all screens in this navigator
     //   }}
     >
-     
       <Stack.Screen
         name="Home"
         component={Home}
@@ -45,8 +45,6 @@ const HomeNavigator = () => {
         component={ChargesPage}
         options={{ headerShown: false, animation: "slide_from_right" }}
       />
-      
-      
     </Stack.Navigator>
   );
 };
@@ -57,17 +55,12 @@ const ExploreNavigator = () => {
     //     headerShown: false // Hide the header for all screens in this navigator
     //   }}
     >
-      
       <Stack.Screen
         name="TicketBookingHome"
         component={TicketBookingHome}
         options={{ headerTitle: "", headerShown: false }}
       />
-     <Stack.Screen
-      name="TourComparing"
-      component={TourComparing}
-      options={{ headerTitle: "", headerShown: false }}
-    />
+
       <Stack.Screen
         name="TicketBookingDetails"
         component={TicketBookingDetails}
@@ -78,7 +71,6 @@ const ExploreNavigator = () => {
         component={TicketPage}
         options={{ headerShown: false, animation: "slide_from_right" }}
       />
-      
 
       <Stack.Screen
         name="CustomImageCarousal"
@@ -90,6 +82,36 @@ const ExploreNavigator = () => {
         name="Details"
         component={Details}
         options={{ headerShown: false, animation: "slide_from_right" }}
+      />
+    </Stack.Navigator>
+  );
+};
+const CompareNavigator = () => {
+  return (
+    <Stack.Navigator
+    // screenOptions={{
+    //     headerShown: false // Hide the header for all screens in this navigator
+    //   }}
+    >
+      <Stack.Screen
+        name="TourComparing"
+        component={TourComparing}
+        options={{ headerTitle: "", headerShown: false }}
+      />
+    </Stack.Navigator>
+  );
+};
+const SettingNavigator = () => {
+  return (
+    <Stack.Navigator
+    // screenOptions={{
+    //     headerShown: false // Hide the header for all screens in this navigator
+    //   }}
+    >
+      <Stack.Screen
+        name="TourComparing"
+        component={""}
+        options={{ headerTitle: "", headerShown: false }}
       />
     </Stack.Navigator>
   );
@@ -108,12 +130,32 @@ const BottomTab = () => {
         }}
       />
       <Tab.Screen
+        name="Compare"
+        component={CompareNavigator}
+        options={{
+          headerShown: false,
+          tabBarIcon: ({ focused, size }) => (
+            <Ionicons name="git-compare-outline" size={24} color="black" />
+          ),
+        }}
+      />
+      <Tab.Screen
         name="Explore"
         component={ExploreNavigator}
         options={{
           headerShown: false,
           tabBarIcon: ({ focused, size }) => (
             <FontAwesome name="wpexplorer" size={24} color="black" />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Setting"
+        component={SettingNavigator}
+        options={{
+          headerShown: false,
+          tabBarIcon: ({ focused, size }) => (
+            <Ionicons name="settings" size={24} color="black" />
           ),
         }}
       />
