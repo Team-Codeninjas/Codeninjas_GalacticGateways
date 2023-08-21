@@ -12,7 +12,15 @@ import Home from "./pages/Home";
 import TicketPage from "./screen/ticketDownload/TicketPage";
 import { FontAwesome } from "@expo/vector-icons";
 import TourComparing from "./screen/TourComparing";
-
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  Dimensions,
+  TouchableOpacity,
+  ImageBackground,
+} from "react-native";
 import ChargesPage from "./pages/Charges/Chargespage";
 import { Ionicons } from "@expo/vector-icons";
 const Stack = createStackNavigator();
