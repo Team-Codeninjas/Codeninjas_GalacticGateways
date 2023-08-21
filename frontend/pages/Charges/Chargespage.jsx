@@ -1,9 +1,4 @@
 import React, { useState } from "react";
-<<<<<<< Updated upstream
-import { useNavigation } from "@react-navigation/native";
-
-=======
->>>>>>> Stashed changes
 import {
   View,
   Text,
@@ -16,31 +11,15 @@ import {
 import { LinearGradient } from "expo-linear-gradient";
 // import { Link } from "expo-router";
 import backimage from "../../images/background.jpg";
-<<<<<<< Updated upstream
-const ChargesPage = ({route }) => {
-  const navigation = useNavigation();
-
-=======
 const ChargesPage = ({navigation}) => {
->>>>>>> Stashed changes
   const [base_fare, setbase_fare] = useState(3000);
   const [travelTaxrate, settravelTaxrate] = useState(0.2);
   const [spaceportfee, setspaceportfee] = useState(300);
   const [meals, setmeals] = useState(500);
-<<<<<<< Updated upstream
-  const { selectedFlightDetails } = route.params;
-
-
-=======
->>>>>>> Stashed changes
 
   return (
     <View style={styles.containerrr}> 
       <ImageBackground source={backimage}  style={styles.imageBackground}>
-<<<<<<< Updated upstream
-      <Image source={require("../../assets/jet.png")} style={styles.jetImg} />
-=======
->>>>>>> Stashed changes
       <View style={styles.container}>
         <Text style={styles.textStyle}>Charges For Your Trip</Text>
       </View>
@@ -145,10 +124,7 @@ const styles = StyleSheet.create({
   },
   textStyle: {
     color: "#FFF",
-<<<<<<< Updated upstream
-=======
     fontFamily: "Lato",
->>>>>>> Stashed changes
     fontSize: 24,
     fontStyle: "normal",
     fontWeight: "800",
@@ -169,10 +145,7 @@ const styles = StyleSheet.create({
   },
   additionalText: {
     color: "#FFF",
-<<<<<<< Updated upstream
-=======
     fontFamily: "Lato",
->>>>>>> Stashed changes
     fontSize: 16,
     fontStyle: "normal",
     fontWeight: "900",
@@ -218,10 +191,7 @@ const styles = StyleSheet.create({
   totaltext: {
     marginLeft: screenWidth*0.04,
     color: "#000",
-<<<<<<< Updated upstream
-=======
     fontFamily: "Lato",
->>>>>>> Stashed changes
     fontSize: 18,
     fontStyle: "normal",
     fontWeight: "900",
@@ -229,10 +199,7 @@ const styles = StyleSheet.create({
   totalprice: {
     marginRight: screenWidth*0.04,
     color: "#000",
-<<<<<<< Updated upstream
-=======
     fontFamily: "Lato",
->>>>>>> Stashed changes
     fontSize: 18,
     fontStyle: "normal",
     fontWeight: "900",
@@ -258,10 +225,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: "#0C0337",
-<<<<<<< Updated upstream
-=======
     fontFamily: "Lato",
->>>>>>> Stashed changes
     fontSize: 19,
     fontWeight: "900",
   },
@@ -275,16 +239,6 @@ const styles = StyleSheet.create({
   imageBackground: {
     flex: 1, // Ensure the image background takes the full screen
     resizeMode: 'cover', // Adjust this based on your needs
-<<<<<<< Updated upstream
-  },jetImg: {
-    position: "absolute",
-    zIndex: 100,
-    height: 200,
-    display: "flex",
-    right: 10,
-    top: 1,
-=======
->>>>>>> Stashed changes
   },
 });
 
