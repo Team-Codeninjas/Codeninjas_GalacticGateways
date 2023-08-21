@@ -1,19 +1,17 @@
 import React from "react";
-import AppNavigator from "./navigation/AppNavigator";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-// import TicketBookingDetails from "../screens/TicketBooking/TicketBookingDetails";
-import TicketBookingDetails from "./screens/TicketBooking/TicketBookingDetails";
+import TicketBookingDetails from "./screen/TicketBooking/TicketBookingDetails";
 import Formm from "./pages/Formm";
-import TicketBookingHome from "./screens/TicketBooking/TicketBookingHome";
+import TicketBookingHome from "./screen/TicketBooking/TicketBookingHome";
 import Payment from "./pages/Payment";
 import CustomImageCarousal from "./components/CustomImageCarousalSquare";
 import Details from "./pages/Details";
 import Home from "./pages/Home";
-import TicketPage from "./screens/ticketDownload/TicketPage";
+import TicketPage from "./screen/ticketDownload/TicketPage";
 import { FontAwesome } from "@expo/vector-icons";
-import TourComparing from "./screens/TourComparing";
+import TourComparing from "./screen/TourComparing";
 
 import ChargesPage from "./pages/Charges/Chargespage";
 import { Ionicons } from "@expo/vector-icons";
@@ -25,15 +23,14 @@ const HomeNavigator = () => {
 
     <Stack.Navigator
     // screenOptions={{
-    //     headerShown: false // Hide the header for all screens in this navigator
+    //     headerShown: false // Hide the header for all screen in this navigator
     //   }}
     >
-        <Stack.Screen
+      <Stack.Screen
         name="Home"
         component={Home}
         options={{ headerShown: false, animation: "slide_from_bottom" }}
       />
-   
       <Stack.Screen
       name="TourComparing"
       component={TourComparing}
@@ -85,7 +82,7 @@ const ExploreNavigator = () => {
   return (
     <Stack.Navigator
     // screenOptions={{
-    //     headerShown: false // Hide the header for all screens in this navigator
+    //     headerShown: false // Hide the header for all screen in this navigator
     //   }}
     >
       <Stack.Screen
@@ -123,7 +120,7 @@ const CompareNavigator = () => {
   return (
     <Stack.Navigator
     // screenOptions={{
-    //     headerShown: false // Hide the header for all screens in this navigator
+    //     headerShown: false // Hide the header for all screen in this navigator
     //   }}
     >
       <Stack.Screen
@@ -138,7 +135,7 @@ const SettingNavigator = () => {
   return (
     <Stack.Navigator
     // screenOptions={{
-    //     headerShown: false // Hide the header for all screens in this navigator
+    //     headerShown: false // Hide the header for all screen in this navigator
     //   }}
     >
       <Stack.Screen
