@@ -1,5 +1,4 @@
 import React from "react";
-import AppNavigator from "./navigation/AppNavigator";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
