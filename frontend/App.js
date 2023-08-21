@@ -26,24 +26,11 @@ const HomeNavigator = () => {
     //     headerShown: false // Hide the header for all screens in this navigator
     //   }}
     >
-        <Stack.Screen
-        name="Home"
-        component={Home}
-        options={{ headerShown: false, animation: "slide_from_bottom" }}
-      />
       <Stack.Screen
-<<<<<<< Updated upstream
         name="Home"
         component={Home}
         options={{ headerShown: false, animation: "slide_from_bottom" }}
       />
-=======
-      name="TourComparing"
-      component={TourComparing}
-      options={{ headerTitle: "", headerShown: false }}
-    />
-    
->>>>>>> Stashed changes
       <Stack.Screen
       name="TourComparing"
       component={TourComparing}
