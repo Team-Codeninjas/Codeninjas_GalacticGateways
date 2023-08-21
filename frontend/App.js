@@ -168,7 +168,7 @@ const BottomTab = () => {
         }}
       />
       <Tab.Screen
-        name="Form"
+        name="Compare"
         component={Formm}
         options={{
           headerShown: false,
@@ -187,7 +187,7 @@ const BottomTab = () => {
           ),
         }}
       /> */}
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Setting"
         component={SettingNavigator}
         options={{
@@ -196,7 +196,7 @@ const BottomTab = () => {
             <Ionicons name="settings" size={24} color="black" />
           ),
         }}
-      />
+      /> */}
     </Tab.Navigator>
   );
 };
