@@ -89,7 +89,7 @@ const QuickSearch = () => {
           style={{ height: 50, width: 150, display: "none" }}
         >
           {spaceportsWithPlanet.map((option) => (
-            <Picker.Item key={option.spaceportId} label={option.spaceportName+' ('+option.planetName+')'} value={option._id} />
+            <Picker.Item key={option.spaceportId} value={option.spaceportName+' ('+option.planetName+')'} label={option.spaceportName+' ('+option.planetName+')'} />
           ))}
         </Picker>
       </View>
@@ -106,7 +106,7 @@ const QuickSearch = () => {
           style={{ height: 50, width: 150, display: "none" }}
         >
           {spaceportsWithPlanet.map((option) => (
-            <Picker.Item key={option.spaceportId} label={option.spaceportName+' ('+option.planetName+')'} value={option._id} />
+            <Picker.Item key={option.spaceportId} value={option.spaceportName+' ('+option.planetName+')'} label={option.spaceportName+' ('+option.planetName+')'} />
           ))}
         </Picker>
       </View>
