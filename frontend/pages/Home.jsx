@@ -1,5 +1,5 @@
 import { StyleSheet, View,StatusBar,Text } from "react-native";
-import React, { useEffect } from "react";
+import React, { useEffect , useState} from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Avatar } from "react-native-paper";
 import { LinearGradient } from "expo-linear-gradient";
@@ -10,15 +10,19 @@ import axios from "axios";
 
 
 const Home = () => {
+  [user, setUser] = useState({});
+
+  const id = '64e3ccce7a354c248be92e78';
   useEffect(() => {
-    const url = "http://localhost:5000/users";
-  axios.get(url).then((res) => {
-    console.log(res.data);
-  }).catch((err) => {
-    console.log(err);
-  });
+    axios
+      .get(`http://192.168.89.97:5000/users?id=${id}`)
+      .then((res) => {
+        setUser(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
-  
 
   return (
     <SafeAreaView>
@@ -30,7 +34,7 @@ const Home = () => {
                 <Text style={styles.headerTitle}>Where would you want to go?</Text>
               </View>
               <View style={[styles.avatarContainer]}>
-                <Avatar.Image size={50} source={{ uri: "https://picsum.photos/200" }} />
+                <Avatar.Image size={50} source={{ uri: user.image_path }} />
               </View>
             </View>
 
