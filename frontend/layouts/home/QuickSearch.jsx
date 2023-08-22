@@ -1,32 +1,29 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { View, StyleSheet } from "react-native";
 import DateTimePicker from "@react-native-community/datetimepicker";
 import { Picker } from "@react-native-picker/picker";
 import CustomButton from "../../components/common/CustomButton";
 import CustomLabel from "../../components/common/CustomLabel";
+import axios from "axios";
+import { set } from "react-hook-form";
 
 const passengersOptions = [
   { label: "Adults", value: "Adults" },
   { label: "Adults + Children", value: "Adults + Children" },
 ];
 
-const locationsOptions = [
-  { label: "Alpha Spaceport (Earth)", value: "Alpha Spaceport (Earth)" },
-  { label: "Theta Spaceport (kepler)", value: "Theta Spaceport (kepler)" },
-  { label: "Starhaven Spaceport (Aetheria)", value: "Starhaven Spaceport (Aetheria)" },
-  { label: "NovaLaunch Hub (Nebulon-9)", value: "NovaLaunch Hub (Nebulon-9)" },
-  { label: "Celestial Gateway (Solaris Prime)", value: "Celestial Gateway (Solaris Prime)" },
-  { label: "Interstellar Nexus (Veridian IV)", value: "Interstellar Nexus (Veridian IV)" },
-  { label: "Astral Launchpad (Luna Terra)", value: "Astral Launchpad (Luna Terra)" },
-  { label: "Galactic Frontier Station (Aquilo Major)", value: "Galactic Frontier Station (Aquilo Major)" },
-  { label: "Nebula Port Authority (Seraphis Minor)", value: "Nebula Port Authority (Seraphis Minor)" },
-  { label: "CosmoLaunch Terminal (Epsilon Eridani)", value: "CosmoLaunch Terminal (Epsilon Eridani)" },
-  { label: "Solarflare Launch Center (Avalon IX)", value: "Solarflare Launch Center (Avalon IX)" },
-  { label: "Orion Outpost (Vortexia)", value: "Orion Outpost (Vortexia)" }
-
-];
 
 const QuickSearch = () => {
+  [spaceportsWithPlanet,setSpaceportsWithPlanet] = useState([]);
+  useEffect(() => {
+    axios.get("http://192.168.89.97:5000/spaceports/withPlanet").then((res) => {
+      setSpaceportsWithPlanet(res.data);
+    }).catch((err) => {
+      console.log(err);
+    });
+  }, []);
+
+
   const [selectedFromLocation, setSelectedFromLocation] = useState(null);
   const [selectedToLocation, setSelectedToLocation] = useState(null);
   const [selectedPassengers, setSelectedPassengers] = useState(null);
@@ -91,8 +88,8 @@ const QuickSearch = () => {
           onValueChange={(itemValue, itemIndex) => setSelectedFromLocation(itemValue)}
           style={{ height: 50, width: 150, display: "none" }}
         >
-          {locationsOptions.map((option, index) => (
-            <Picker.Item key={index} label={option.label} value={option.value} />
+          {spaceportsWithPlanet.map((option) => (
+            <Picker.Item key={option.spaceportId} label={option.spaceportName+' ('+option.planetName+')'} value={option._id} />
           ))}
         </Picker>
       </View>
@@ -108,8 +105,8 @@ const QuickSearch = () => {
           onValueChange={(itemValue, itemIndex) => setSelectedToLocation(itemValue)}
           style={{ height: 50, width: 150, display: "none" }}
         >
-          {locationsOptions.map((option, index) => (
-            <Picker.Item key={index} label={option.label} value={option.value} />
+          {spaceportsWithPlanet.map((option) => (
+            <Picker.Item key={option.spaceportId} label={option.spaceportName+' ('+option.planetName+')'} value={option._id} />
           ))}
         </Picker>
       </View>
