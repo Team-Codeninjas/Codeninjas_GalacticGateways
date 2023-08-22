@@ -1,13 +1,25 @@
 import { StyleSheet, View,StatusBar,Text } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Avatar } from "react-native-paper";
 import { LinearGradient } from "expo-linear-gradient";
 import QuickSearch from "../layouts/home/QuickSearch";
 import BadgeList from "../layouts/home/BadgeList";
 import Colors from "../constants/Colors";
+import axios from "axios";
+
 
 const Home = () => {
+  useEffect(() => {
+    const url = "http://localhost:5000/users";
+  axios.get(url).then((res) => {
+    console.log(res.data);
+  }).catch((err) => {
+    console.log(err);
+  });
+  }, []);
+  
+
   return (
     <SafeAreaView>
       <View style={styles.homeContainer}>
